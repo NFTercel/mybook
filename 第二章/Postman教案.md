@@ -3,6 +3,8 @@
 ## Postman简介
 
 ---
+
+
 一般简单的接口测试我们可以直接在浏览器里面进行调试,但是涉及到一些权限设置的就无法操作了,因此我们需要接口测试的相关工具
 Postman是一个接口测试和http请求的工具。
 
@@ -11,9 +13,14 @@ Postman是一个接口测试和http请求的工具。
 Postman的优点:
 
 * 支持各种的请求类型:get、post、put、 patch、 delete等
+
 * 支持在线存储数据,通过账号就可以进行迁移数据
+
 * 很方便的支持请求 header和请求参数的设置支持不同的认证机制,包括 Basic Auth, Digest Auth, OAuth1.0, OAuth2.0等
+
 * 响应数据是自动按照语法格式高亮的,包括HTML,JSON和XML
+
+  ​
 
 ## 下载安装
 
@@ -21,8 +28,12 @@ Postman的优点:
 Postman有 windows,Mac、 Liunx以及 Chrome插件版本.这里主要介绍Wn平台版本的使用。
 
 * 下载地址:<https://www.getpostman.com/downloads/>
+
 * 官方文档<https://www.getpostman.com/docs/v6>
-* PostmanApi文档:<https://docs.postman-echo.com>
+
+* PostmanApi文档:<https://docs.postman-echo.com
+
+  ​
 
 ## Postman 入门
 
@@ -33,7 +44,7 @@ Postman有 windows,Mac、 Liunx以及 Chrome插件版本.这里主要介绍Wn平
 
 1. 启动软件后在引导界面点击 Request,给 Request命名然后创建文件夹并把该 Request归属到该文件夹
 2. 在地址栏输λ入<http://postman-echo.com/get>然后点击Send按钮,可以看到返回值.如下图所示:
-  ![](..\images\2get.png)
+    ![](..\images\2get.png)
 
 ### Postman工作原理
 
@@ -43,6 +54,8 @@ Postman有 windows,Mac、 Liunx以及 Chrome插件版本.这里主要介绍Wn平
 ### Request编辑
 
 在主界面左侧可以查看、保存、编辑 Request。
+
+
 
 ## 发送不同类型HTTP请求
 
@@ -69,7 +82,7 @@ GET请求可以使用" Query String Parameters"将参数传递给服务器。例
 
 
 **响应数据** 在主界面下方一栏菜单为响应菜单栏,可以查看响应内容, Cookie、 Headers、响应状态码等信息。
-![](F:\gitbook\interfect51\images\26662.png)
+![](..\images\26662.png)
 
 返回值:
 ```json
@@ -135,7 +148,7 @@ HTTP POST请求方法旨在将数据传输到服务器,返回的数据取决于�
 
     https://postman-echo.com/post
 
-![](F:\gitbook\interfect51\images\2888.png)
+![](..\images\2888.png)
 
 </br>
 **Postman Body数据类型说明: **
@@ -189,7 +202,7 @@ PUT请求可以使用 Query String Parameters以及body请求体将参数传递�
 **案例:**
 发送PUT请求,并传递字符参数"helo51zXW"
 
-![](F:\gitbook\interfect51\images\2put.png)
+![](..\images\2put.png)
 
     https://postman-echo.com/put
 返回值
@@ -251,22 +264,33 @@ HTTP DElETE方法用于删除服务器上的资源, DELETE请求可以使用 Que
 }
 ```
 
+
+
 ## Request Header
 
 ---
 Request Header(请求头)用来说明服务器要使用的附加信息,比较重要的信息有 Cookie、 Referer、User- Agent等。
 在 Postman中可以在请求下方的 Headers栏目来设置,如下如图所示：
-![](F:\gitbook\interfect51\images\2get66.png)
+![](..\images\2get66.png)
+
+
 
 ## Response Header
 
 ---
 Response Header（响应头)其中包含了服务器对请求的应答信息,如 Content-Type、 Server、 Set-Cookie等,
 在 Postman主界面下方 Headers或者 Postman Console界面都可以查看 Response Header信息。
-![](F:\gitbook\interfect51\images\2par66.png)
+![](..\images\2par66.png)
 Tps:通过 Postman Console可以看到每次请求的 Request Header详细信息,详见视频演示。
 
-##授权设置
+
+
+
+
+## 授权设置
+
+-----
+
 很多时候,出于安全考虑我们的接口并不希望对外公开。这个时候就需要使用授权( Authorization)机制授权过程验证您是否具有访问服务器所需数据的权限。
 当您发送请求时,您通常必须包含参数,以确保请求貝有访问和返回所需数据的权限。Postman提供授权类型,可以轻松地在 Postman本地应用程序中处理身份
 验证协议Postman支持的授权协议类型如下：
@@ -283,7 +307,7 @@ Tps:通过 Postman Console可以看到每次请求的 Request Header详细信息
 
 这里主要介绍以上加粗的授权协议的使用。
 
-![](F:\gitbook\interfect51\images\2posta.png)
+![](..\images\2posta.png)
 
 ### Basic auth
 
@@ -406,7 +430,7 @@ OAuth(开放授权)是—个开放标准,允许用户让第三方应用访问该
 
 * Consumer Key: RKCGzna7bv9YD57c 
 * Consumer Secret: D+EdQ-gs$-%@2Nu7
-  ![](F:\gitbook\interfect51\images\2outh.png)
+  ![](..\images\2outh.png)
 
 发送请求结果如下:
 ```
@@ -433,6 +457,8 @@ th _signature methodx3DHMAC-SHA1%26oauth timestamp%3D1531299384%26oauth version%
 扩展资料:[各个授权协议文档](https://www.jellythink.com/archives/169)
 </br>
 
+
+
 ## Cookie设置
 
 ---
@@ -448,18 +474,18 @@ Cookie是由服务端生成,存储在响应头中,返回给客户端,客户端�
 ### Set Cookies
 
 在Send按钮下方点击 Cookies文字菜单,弹出如下界面,然后可以设置 Cookie。
-![](F:\gitbook\interfect51\images\2setck.png)
+![](..\images\2setck.png)
 
 请求URL如下:请求方式为GET添加 Cookie值为 username:51zXw 
 
      http://www.baidu.com
 打开 Console找到 Request Header可以看到自定义设置的 Cookie内容。
-![](F:\gitbook\interfect51\images\251zx.png)
+![](..\images\251zx.png)
 
 ### Get Cookies 
 
 Cookie获取比较简单,直接获取 Response Headers里面的set- cookie值即可,或者在主界面下方 Cookie菜单栏里面也可以查看。
-![](F:\gitbook\interfect51\images\2getck.png)
+![](..\images\2getck.png)
 
 ### Delete Cookies
 
@@ -509,11 +535,11 @@ Postman提供了变量设置,有4种变量类型。
 环境变量设置：在 postman界面点击右上角眼睛图标,即可开始设置环境变量和全局变量.环境变量设置过程如下图所示:
 我们可以设置两种环境deν和 release. deν是开发测试环境; release是正式的生产环境.host环境变量,根据不同的环境值
 不一样。
-![](F:\gitbook\interfect51\images\2add.png)
+![](..\images\2add.png)
 
-![](F:\gitbook\interfect51\images\2add2.png)
+![](..\images\2add2.png)
 
-![](F:\gitbook\interfect51\images\2add3.png)
+![](..\images\2add3.png)
 详细过程见视频演示。
 
 ### 本地变量
@@ -522,13 +548,13 @@ Postman提供了变量设置,有4种变量类型。
 设置两个本地变量( user, passwd)作为参数.请求方式为POST
 
      https://postman-echo.com/post
-![](F:\gitbook\interfect51\images\2bb.png)
+![](..\images\2bb.png)
 
-从上图中我们可以看到变量设置的格式为{{ variable name}}
+从上图中我们可以看到变量设置的格式为{{ variable_name}}
 变量设置好之后需要赋值,在pre- request- Script里面编写如下代码:
 
-    pm variables.set( "user","51ZXW"); 
-    pm variables.set("passwd","66666 ");
+    pm.variables.set( "user","51ZXW"); 
+    pm.variables.set("passwd","66666");
 点击send执行之后的返回值如下,可以看到我们定义的变量已经发送。
 ![](F:\gitbook\interfect51\images\2bb1.png)
 </br>
@@ -545,7 +571,7 @@ Postman提供了变量设置,有4种变量类型。
 
 点击眼睛图标后,在 Global选项菜单点击εdit菜单即可设置全局变量,如下图所示.全局变量的引用格式和环境变量一样。
 注意:当环境变量和全局变量名称一样时,切换到某个环境时,环境变量会覆盖全局变量。
-![](F:\gitbook\interfect51\images\2ym.png)
+![](..\images\2ym.png)
 
 **脚本设置**
 使用如下脚本可以设置全局变量: variable key表示变量名称, variable_ value表示变量值。
@@ -562,8 +588,8 @@ A接口请求URL如下：
 * 请求方式为Post
 * 请求参数: userid(这里自己定义,接口会返回对应的id值)
   返回值
-  ![](F:\gitbook\interfect51\images\2pp1.png)
-  ![](F:\gitbook\interfect51\images\2pp2.png)
+  ![](..\images\2pp1.png)
+  ![](..\images\2pp2.png)
   根据返回值我们需要从返回值中提取 userid值。在τest标签栏下编写如下脚本获取υserid值
   ![](..\images\2pp3.jpg)
 
@@ -578,7 +604,7 @@ A接口请求URL如下：
 我们可以创建一个如下内容的json文件:
 
 **data. json**
-![](F:\gitbook\interfect51\images\2pp4.png)
+![](..\images\2pp4.png)
 稍后我们会结合运行 Collection来讲解如何导入该数据文件。
 
 ## 断言
@@ -611,26 +637,26 @@ JS脚本来编写pre- request Script和 test Script.
 
     pm.variables.set("user",'zxw');
 在Test栏下面编写如下脚本
-![](index_files/b8c2b370-e55c-4b74-ba91-40ecbf30cfa8.jpg)
+![](..\images\断言1.jpg)
 
 **断言结果**
-![](index_files/1bd93d20-b96e-499e-a764-381662c766cb.png)
+![](..\images\断言2.png)
 
 扩展资料: [Postman测试脚本官方文档](https://learning.getpostman.com/docs/postman/scripts/intro_to_scripts/)
 </br>
 
-##运行 Collection
+## 运行 Collection
 
 ---
 ### 批量执行
 
 当我们想批量测试某个集合里面的各个API时,可以使用 Collection Runner来批量运行AP,同时可以进行环境
 变量、迭代执行次数、延迟时间等设置。
-![](index_files/83126d96-9a8d-4687-8897-10e2fba012aa.png)
+![](..\images\coll1.png)
 
 
 执行结果
-![](index_files/4a35b68b-243a-45a6-9b47-6971152ffa95.png)
+![](..\images\coll2.png)
 
 ## 数据驱动
 
@@ -643,16 +669,16 @@ JS脚本来编写pre- request Script和 test Script.
 
 如下图所示,data选择之前我们创建的json数据文件: data.json,文件类型选择 application/json json数据内容如下。
 
-![](index_files/7bce4dcf-5a8a-4535-9756-6f18837af92c.png)
-![](index_files/20d140ff-f6f9-4989-b8d3-61574c1eb3f5.png)
+![](..\images\d1.png)
+![](..\images\d2.png)
 请求之前延迟时间最好设置为1000~3000,避免过于频繁请求被禁。
-![](index_files/268a2f6c-69ce-4fd8-a349-8c460c0c1041.png)
+![](..\images\d3.png)
 点击 Preview按钮可以预览导入的数据。
-![](index_files/57822120-b38c-4094-bd1f-56c6cf19f2bb.png)
+![](..\images\d4.png)
 
 ### 执行结果
 
-![](index_files/b05c7dea-641f-4093-bd0d-7492da779e55.png)
+![](..\images\d5.png)
 
 </br>
 
@@ -667,7 +693,7 @@ JS脚本来编写pre- request Script和 test Script.
 
 最直接的方法就是直接在集合里面拖动调整顺序,但是毎次去拖动也比较麻烦,特别是当请求比较多的时候.这时候最高效的方法就是通过脚本设置。
 首先下载官方提供的案例文件:collection.json导入到 postman,运行Collection结果如下图所:
-![](index_files/80f06d0b-1333-486f-8d05-3edf2aa11241.png)
+![](..\images\g1.png)
 
 接下来要调整执行顺序为: Request1-> Request3-> Request.2-> Request4
 </br>
@@ -682,8 +708,10 @@ JS脚本来编写pre- request Script和 test Script.
     postman.setNextRequest('Request 3')
 注意:第一个执行请求的排序一定要在第一个
 </br>
-###执行结果
-![](index_files/7118d47a-848b-457f-ac7b-5a5db4fce813.png)
+
+### 执行结果
+
+![](..\images\g2.png)
 
 相关资料: [collection runs官方文档](https://learning.getpostman.com/docs/postman/collection_runs/intro_to_collection_runs/)
 
@@ -718,7 +746,7 @@ JS脚本来编写pre- request Script和 test Script.
 
 **执行测试**
 首先将 postman的集合导出,如下图所示:
-![](index_files/997ec11a-3554-4971-98da-1532e8d0df67.png)
+![](..\images\zx1.png)
 
 
 在桌面新建文件夹 pmtest将导出的 postman文件和相关数据文件放入。
@@ -760,7 +788,7 @@ Jenkins是—个开源软件项目,是基于Java开发的_种[持续集成]工�
 
 下载后安装到指定的路径即可默认启动页面为 localhots:8080如果8080端口被占用无法打开,可以进入到 jenkins安装目录,找到 
 jenkins.xm配置文件打开,修改如下代码的端口号即可。
-![](index_files/cbcc3143-540f-411e-94ce-623ffdcb2a2b.png)
+![](..\images\x1.png)
 
 ### 集成步骤
 
@@ -768,11 +796,11 @@ jenkins.xm配置文件打开,修改如下代码的端口号即可。
 
 * 首先新建一个项目: postman_ api_test
 * 然后在构建栏目下拉菜单选择 Execute windows batch command
-  ![](index_files/4cb6aad0-ee45-4da6-b11a-866518aa2de6.png)
+  ![](..\images\x2.png)
   Tips:我的 jenkins:安装在D盘因此需要使用命令c:切换到 postman脚本所在盘符。
-  ![](index_files/dbde41f0-db8b-4faa-b446-fa1755c69807.png)
+  ![](..\images\x3.png)
   最后执行结果如下：
-  ![](index_files/34e345e2-9de3-41cd-bb22-b79cd48b716b.png)
+  ![](..\images\x4.png)
   其他设置如设置定时执行,可以参考 Apium教程中的:[6-14框架综合实践(13) ——jenkins自动化测试平台搭建](https://www.51zxw.net/show.aspx?id=70266&cid=670)
   </br>
 
@@ -787,9 +815,9 @@ jenkins.xm配置文件打开,修改如下代码的端口号即可。
 
 Postman支持导出不同语言版本的脚本,当一个接口调试好之后,点击右侧的code字样即弹出如下界面可以选择语言.最后选择
 你需要语言版本即可生成对应的代码。
-![](index_files/a353053f-7550-48b3-babc-e75ae0795f00.png)
+![](..\images\c1.png)
 生成的代码片段可以点击 Copy to Clipboard复制。
-![](index_files/ef5ac5bc-2934-428d-b887-20365061d90e.png)
+![](..\images\c2.png)
 
 </br>
 
