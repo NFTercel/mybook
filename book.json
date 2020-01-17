@@ -66,6 +66,10 @@
     },
     "bibtex-indexed-cite": {
       "path": "/"
-    }
+    },  
+    "donate": {
+          "title": "",
+          "button": "赏"
+        }
   }
 }
