@@ -1,0 +1,733 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第6节：Mock利器——Json Server · 接口</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="HttpRunner接口自动化测试框架.html" />
+    
+    
+    <link rel="prev" href="Locust接口性能测试.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"monster","repo":"mybook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第一章/">
+            
+                <a href="../第一章/">
+            
+                    
+                    第一章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第一章/课程简介&接口测试概述.html">
+            
+                <a href="../第一章/课程简介&接口测试概述.html">
+            
+                    
+                    第1节：课程简介&接口测试概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第一章/HTTP协议基础.html">
+            
+                <a href="../第一章/HTTP协议基础.html">
+            
+                    
+                    第2节：HTTP协议基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第一章/JSON数据.html">
+            
+                <a href="../第一章/JSON数据.html">
+            
+                    
+                    第3节：JSON数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第二章/">
+            
+                <a href="../第二章/">
+            
+                    
+                    第二章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第二章/Postman教案.html">
+            
+                <a href="../第二章/Postman教案.html">
+            
+                    
+                    第1节：Postman教案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第二章/Jmeter接口测试.html">
+            
+                <a href="../第二章/Jmeter接口测试.html">
+            
+                    
+                    第2节：Jmeter接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第二章/Jmeter+Ant+Jenkins接口自动化测试平台.html">
+            
+                <a href="../第二章/Jmeter+Ant+Jenkins接口自动化测试平台.html">
+            
+                    
+                    第3节：Jmeter+Ant+Jenkins接口自动化测试平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第二章/jmeter基础使用手册.html">
+            
+                <a href="../第二章/jmeter基础使用手册.html">
+            
+                    
+                    第4节：jmeter基础使用手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第三章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Requests库使用.html">
+            
+                <a href="Requests库使用.html">
+            
+                    
+                    第1节：Requests库使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Python接口测试实践——基于天气API.html">
+            
+                <a href="Python接口测试实践——基于天气API.html">
+            
+                    
+                    第2节：Python接口测试实践——基于天气API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="Restful接口开发与测试.html">
+            
+                <a href="Restful接口开发与测试.html">
+            
+                    
+                    第3节：Restful接口开发与测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="Django数据管理.html">
+            
+                <a href="Django数据管理.html">
+            
+                    
+                    第4节：Django数据管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="Locust接口性能测试.html">
+            
+                <a href="Locust接口性能测试.html">
+            
+                    
+                    第5节：Locust接口性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.6" data-path="Mock利器——Json Server.html">
+            
+                <a href="Mock利器——Json Server.html">
+            
+                    
+                    第6节：Mock利器——Json Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="HttpRunner接口自动化测试框架.html">
+            
+                <a href="HttpRunner接口自动化测试框架.html">
+            
+                    
+                    第7节：HttpRunner接口自动化测试框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第四章/">
+            
+                <a href="../第四章/">
+            
+                    
+                    第四章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第四章/接口测试面试题.html">
+            
+                <a href="../第四章/接口测试面试题.html">
+            
+                    
+                    第1节：接口测试面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第6节：Mock利器——Json Server</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;6&#x8282;&#xFF1A;mock&#x5229;&#x5668;&#x2014;&#x2014;json-server"><b></b>&#x7B2C;6&#x8282;&#xFF1A;Mock&#x5229;&#x5668;&#x2014;&#x2014;Json Server</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EC0;&#x4E48;&#x662F;-mock"><b></b>&#x4EC0;&#x4E48;&#x662F; Mock</a></li><li><span class="title-icon "></span><a href="#mock-&#x4F5C;&#x7528;"><b></b>Mock &#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#json-server-&#x7B80;&#x4ECB;"><b></b>Json Server &#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#json-server-&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"><b></b>Json Server &#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x73AF;&#x5883;&#x4F9D;&#x8D56;"><b></b>&#x73AF;&#x5883;&#x4F9D;&#x8D56;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;"><b></b>&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x6821;&#x9A8C;"><b></b>&#x6821;&#x9A8C;</a></li><li><span class="title-icon "></span><a href="#&#x5165;&#x95E8;&#x4F7F;&#x7528;"><b></b>&#x5165;&#x95E8;&#x4F7F;&#x7528;</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;-data-&#x6587;&#x4EF6;"><b></b>&#x521B;&#x5EFA; data &#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x542F;&#x52A8;&#x670D;&#x52A1;"><b></b>&#x542F;&#x52A8;&#x670D;&#x52A1;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;"><b></b>&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;</a></li><li><span class="title-icon "></span><a href="#&#x8DEF;&#x7531;&#x751F;&#x6210;"><b></b>&#x8DEF;&#x7531;&#x751F;&#x6210;</a></li></ul><li><span class="title-icon "></span><a href="#&#x63A5;&#x53E3;&#x8C03;&#x8BD5;"><b></b>&#x63A5;&#x53E3;&#x8C03;&#x8BD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x8FC7;&#x6EE4;"><b></b>&#x8FC7;&#x6EE4;</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x9875;"><b></b>&#x5206;&#x9875;</a></li><li><span class="title-icon "></span><a href="#&#x6392;&#x5E8F;"><b></b>&#x6392;&#x5E8F;</a></li><li><span class="title-icon "></span><a href="#&#x5207;&#x7247;"><b></b>&#x5207;&#x7247;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;"><b></b>&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x5168;&#x5C40;&#x641C;&#x7D22;"><b></b>&#x5168;&#x5C40;&#x641C;&#x7D22;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;-db"><b></b>&#x67E5;&#x770B; db</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;"><b></b>&#x53C2;&#x8003;&#x8D44;&#x6599;</a></li></ul></ul></div><a href="#&#x7B2C;6&#x8282;&#xFF1A;mock&#x5229;&#x5668;&#x2014;&#x2014;json-server" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;6&#x8282;&#xFF1A;mock&#x5229;&#x5668;&#x2014;&#x2014;json-server"><a name="&#x7B2C;6&#x8282;&#xFF1A;mock&#x5229;&#x5668;&#x2014;&#x2014;json-server" class="anchor-navigation-ex-anchor" href="#&#x7B2C;6&#x8282;&#xFF1A;mock&#x5229;&#x5668;&#x2014;&#x2014;json-server"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;6&#x8282;&#xFF1A;Mock&#x5229;&#x5668;&#x2014;&#x2014;Json Server</h1>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;-mock"><a name="&#x4EC0;&#x4E48;&#x662F;-mock" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;-mock"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EC0;&#x4E48;&#x662F; Mock</h2>
+<p>Mock &#x5728;&#x4E2D;&#x6587;&#x7684;&#x542B;&#x4E49;&#x5C31;&#x662F;&#x6A21;&#x62DF;&#x7684;&#x610F;&#x601D;&#xFF0C;mock &#x6D4B;&#x8BD5;&#x5C31;&#x662F;&#x5728;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;&#x67D0;&#x4E9B;&#x4E0D;&#x5BB9;&#x6613;&#x6784;&#x9020;&#x6216;&#x8005;&#x4E0D;&#x5BB9;&#x6613;&#x83B7;&#x53D6;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7528;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x7684;&#x5BF9;&#x8C61;&#x6765;&#x521B;&#x5EFA;&#x4EE5;&#x4FBF;&#x6D4B;&#x8BD5;&#x7684;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x67D0;&#x79CD;&#x6280;&#x672F;&#x624B;&#x6BB5;&#x6A21;&#x62DF;&#x6D4B;&#x8BD5;&#x5BF9;&#x8C61;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x8FD4;&#x56DE;&#x9884;&#x5148;&#x8BBE;&#x8BA1;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x5173;&#x952E;&#x8BCD;&#x662F;&#x9884;&#x5148;&#x8BBE;&#x8BA1;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5BF9;&#x4E8E;&#x4EFB;&#x610F;&#x88AB;&#x6D4B;&#x8BD5;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5177;&#x4F53;&#x6D4B;&#x8BD5;&#x573A;&#x666F;&#x7684;&#x9700;&#x8981;&#xFF0C;&#x8FD4;&#x56DE;&#x7279;&#x5B9A;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x6BD4;&#x5982;&#x8981;&#x6D4B;&#x8BD5;&#x652F;&#x4ED8;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x4E0D;&#x60F3;&#x771F;&#x5B9E;&#x652F;&#x4ED8;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5; Mock &#x6765;&#x6A21;&#x62DF;&#x652F;&#x4ED8;&#xFF0C;&#x8FD4;&#x56DE;&#x652F;&#x4ED8;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<hr>
+<h2 id="mock-&#x4F5C;&#x7528;"><a name="mock-&#x4F5C;&#x7528;" class="anchor-navigation-ex-anchor" href="#mock-&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>Mock &#x4F5C;&#x7528;</h2>
+<p>&#x2022; &#x9996;&#x5148;&#xFF0C;Mock &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x89E3;&#x9664;&#x6D4B;&#x8BD5;&#x5BF9;&#x8C61;&#x5BF9;&#x5916;&#x90E8;&#x670D;&#x52A1;&#x7684;&#x4F9D;&#x8D56;&#xFF08;&#x6BD4;&#x5982;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x7B2C;&#x4E09;&#x65B9;&#x63A5;&#x53E3;&#x7B49;&#xFF09;&#xFF0C;&#x4F7F;&#x5F97;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x53EF;&#x4EE5;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x3002;
+&#x2022; &#x63D0;&#x524D;&#x521B;&#x5EFA;&#x6D4B;&#x8BD5;&#xFF0C;TDD&#xFF08;&#x6D4B;&#x8BD5;&#x9A71;&#x52A8;&#x5F00;&#x53D1;&#xFF09;&#x3002;&#x5982;&#x679C;&#x4F60;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A; Mock &#x90A3;&#x4E48;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x63A5;&#x53E3;&#x5F00;&#x53D1;&#x5B8C;&#x6210;&#x4E4B;&#x524D;&#x5199;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x811A;&#x672C;&#x4E86;&#xFF0C;&#x5F53;&#x63A5;&#x53E3;&#x5F00;&#x53D1;&#x5B8C;&#x6210;&#x65F6;&#x518D;&#x66FF;&#x6362;&#x4E3A;&#x771F;&#x5B9E;&#x7684;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x5373;&#x53EF;&#x3002;
+&#x2022; &#x66FF;&#x6362;&#x5916;&#x90E8;&#x670D;&#x52A1;&#x8C03;&#x7528;&#xFF0C;&#x63D0;&#x5347;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x7684;&#x8FD0;&#x884C;&#x901F;&#x5EA6;&#x3002;&#x4EFB;&#x4F55;&#x5916;&#x90E8;&#x670D;&#x52A1;&#x8C03;&#x7528;&#x81F3;&#x5C11;&#x662F;&#x8DE8;&#x8FDB;&#x7A0B;&#x7EA7;&#x522B;&#x7684;&#x6D88;&#x8017;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x8DE8;&#x7CFB;&#x7EDF;&#x3001;&#x8DE8;&#x7F51;&#x7EDC;&#x7684;&#x6D88;&#x8017;&#xFF0C;&#x800C; Mock &#x53EF;&#x4EE5;&#x628A;&#x6D88;&#x8017;&#x964D;&#x4F4E;&#x5230;&#x8FDB;&#x7A0B;&#x5185;&#x3002;</p>
+<hr>
+<h2 id="json-server-&#x7B80;&#x4ECB;"><a name="json-server-&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#json-server-&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>Json Server &#x7B80;&#x4ECB;</h2>
+<p>json-server &#x662F;&#x4E00;&#x6B3E;&#x5C0F;&#x5DE7;&#x7684; Mock &#x5DE5;&#x5177;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x4E0D;&#x5199;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x5728; 30 &#x79D2;&#x5185;&#x521B;&#x5EFA;&#x4E00;&#x5957; Restful &#x98CE;&#x683C;&#x7684; api&#xFF0C;&#x9002;&#x5408; 3 &#x4EBA;&#x53CA;&#x4EE5;&#x4E0B;&#x7684;&#x524D;&#x7AEF;&#x56E2;&#x961F;&#x505A;&#x8FC5;&#x901F; mock &#x540E;&#x53F0;&#x903B;&#x8F91;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x4E2D;&#x4F7F;&#x7528;&#x3002;&#x76F8;&#x6BD4;&#x8F83; Django&#xFF0C;flask &#x6765;&#x5B9E;&#x73B0; Mock &#x8981;&#x65B9;&#x4FBF;&#x5F88;&#x591A;&#x3002;</p>
+<p>&#x2022; &#x4E3B;&#x9875;&#x5730;&#x5740;&#xFF1A;<a href="https://www.npmjs.com/package/json-server" target="_blank">https://www.npmjs.com/package/json-server</a>
+&#x2022; Github &#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/typicode/json-server" target="_blank">https://github.com/typicode/json-server</a></p>
+<hr>
+<h2 id="json-server-&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"><a name="json-server-&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#json-server-&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>Json Server &#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</h2>
+<h3 id="&#x73AF;&#x5883;&#x4F9D;&#x8D56;"><a name="&#x73AF;&#x5883;&#x4F9D;&#x8D56;" class="anchor-navigation-ex-anchor" href="#&#x73AF;&#x5883;&#x4F9D;&#x8D56;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73AF;&#x5883;&#x4F9D;&#x8D56;</h3>
+<p>&#x2022; &#x9996;&#x9009;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x597D; <a href="https://nodejs.org/zh-cn/download/" target="_blank">Node.js</a>,
+&#x2022; &#x56FD;&#x5185;&#x7528;&#x6237;&#x5EFA;&#x8BAE;&#x914D;&#x7F6E;&#x597D;&#xFF1A;<a href="https://npm.taobao.org/" target="_blank">cnpm</a>
+&#x2022; &#x5B89;&#x88C5;&#x914D;&#x7F6E;&#x89C6;&#x9891;&#x6559;&#x7A0B;&#x53EF;&#x53C2;&#x8003;&#xFF1A;<a href="http://www.51zxw.net/show.aspx?id=69959&amp;cid=670" target="_blank">Appium &#x73AF;&#x5883;&#x642D;&#x5EFA;</a></p>
+<h2 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h2>
+<pre class="language-"><code>cnpm install -g json-server
+</code></pre><h2 id="&#x6821;&#x9A8C;"><a name="&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6821;&#x9A8C;</h2>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x8F93;&#x5165;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#xFF1A;</p>
+<pre class="language-"><code>json-server -h
+</code></pre><p>&#x5B89;&#x88C5;&#x6B63;&#x786E;&#x4F1A;&#x63D0;&#x793A;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<p><img src="index_files/ddf35fac-58c3-4b58-9091-09a18166cd10.png" alt="">
+<img src="index_files/565c3200-f236-4445-a666-9dd216da8136.png" alt=""></p>
+<hr>
+<h2 id="&#x5165;&#x95E8;&#x4F7F;&#x7528;"><a name="&#x5165;&#x95E8;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5165;&#x95E8;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5165;&#x95E8;&#x4F7F;&#x7528;</h2>
+<h3 id="&#x521B;&#x5EFA;-data-&#x6587;&#x4EF6;"><a name="&#x521B;&#x5EFA;-data-&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;-data-&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA; data &#x6587;&#x4EF6;</h3>
+<p>&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; json &#x6587;&#x4EF6;&#xFF1A;db.json &#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>{
+&quot;posts&quot;: [
+    { &quot;id&quot;: 1, &quot;title&quot;: &quot;json-server&quot;, &quot;author&quot;: &quot;typicode&quot; }
+],
+&quot;comments&quot;: [
+    { &quot;id&quot;: 1, &quot;body&quot;: &quot;some comment&quot;, &quot;postId&quot;: 1 }
+],
+&quot;profile&quot;: { &quot;name&quot;: &quot;typicode&quot; }
+}
+</code></pre><h3 id="&#x542F;&#x52A8;&#x670D;&#x52A1;"><a name="&#x542F;&#x52A8;&#x670D;&#x52A1;" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x542F;&#x52A8;&#x670D;&#x52A1;</h3>
+<pre class="language-"><code>C:\Users\Shuqing&gt;json-server --watch D:\api_test\json_action\db.json
+</code></pre><p>&#x542F;&#x52A8;&#x6210;&#x529F;&#x540E;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x63D0;&#x793A;&#xFF1A;</p>
+<p><img src="index_files/f417e94f-9a5f-463e-98ec-145269a169dc.png" alt=""></p>
+<h3 id="&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;"><a name="&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;</h3>
+<p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165; <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> &#x53EF;&#x4EE5;&#x8FDB;&#x5165;&#x5230;&#x4E3B;&#x9875;&#x3002;</p>
+<p><img src="index_files/f0a3e072-4ef1-4c85-8ada-8c83ab83bb9f.jpg" alt=""></p>
+<h4 id="&#x67E5;&#x8BE2;"><a name="&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;</h4>
+<p>&#x8F93;&#x5165; <a href="http://localhost:3000/posts" target="_blank">http://localhost:3000/posts</a> &#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>[
+ {
+    &quot;id&quot;: 1,
+    &quot;title&quot;: &quot;json-server&quot;,
+    &quot;author&quot;: &quot;typicode&quot;
+ }
+]
+</code></pre><p>&#x8F93;&#x5165; <a href="http://localhost:3000/posts/1" target="_blank">http://localhost:3000/posts/1</a> &#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>{
+ &quot;id&quot;: 1,
+ &quot;title&quot;: &quot;json-server&quot;,
+ &quot;author&quot;: &quot;typicode&quot;
+}
+</code></pre><h4 id="&#x589E;&#x52A0;"><a name="&#x589E;&#x52A0;" class="anchor-navigation-ex-anchor" href="#&#x589E;&#x52A0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x589E;&#x52A0;</h4>
+<p>&#x4F7F;&#x7528; POST &#x8BF7;&#x6C42;&#x53EF;&#x4EE5;&#x589E;&#x52A0;&#x6570;&#x636E;&#xFF0C;&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x5728; Postman &#x4E2D;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x914D;&#x7F6E;</p>
+<p><img src="index_files/bbe18395-7f1a-45ff-9d4a-7b74f000ecc8.png" alt=""></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6210;&#x529F;&#x63D2;&#x5165;&#x4E86;&#x6570;&#x636E;&#x3002;</p>
+<h4 id="&#x4FEE;&#x6539;"><a name="&#x4FEE;&#x6539;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;</h4>
+<p>&#x4F7F;&#x7528; PATCH &#x6216;&#x8005; PUT &#x53EF;&#x4EE5;&#x5BF9;&#x6570;&#x636E;&#x66F4;&#x65B0;&#xFF0C;&#x4F8B;&#x5982;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#xFF0C;&#x5373;&#x53EF;&#x4FEE;&#x6539; author &#x6570;&#x636E;&#x3002;
+<img src="index_files/afce58bc-304a-40f2-8255-fbf4f3c1ee8e.png" alt=""></p>
+<h4 id="&#x5220;&#x9664;"><a name="&#x5220;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;</h4>
+<p>&#x4F7F;&#x7528; DELETE &#x53EF;&#x4EE5;&#x5220;&#x9664;&#x6570;&#x636E;&#xFF0C;&#x4F8B;&#x5982; &#x8BF7;&#x6C42; <a href="http://NaN/posts/3&#xFF0C;&#x5219;&#x4F1A;&#x5220;&#x9664;" target="_blank">http://NaN/posts/3&#xFF0C;&#x5219;&#x4F1A;&#x5220;&#x9664;</a> id=3 &#x7684;&#x6570;&#x636E;</p>
+<h3 id="&#x8DEF;&#x7531;&#x751F;&#x6210;"><a name="&#x8DEF;&#x7531;&#x751F;&#x6210;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x7531;&#x751F;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8DEF;&#x7531;&#x751F;&#x6210;</h3>
+<p>&#x6839;&#x636E;&#x4E0A;&#x9762;&#x7684; data &#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B; json-server &#x4F1A;&#x751F;&#x6210;&#x4E24;&#x7C7B;&#x8DEF;&#x7531;&#xFF1A;</p>
+<p>&#x590D;&#x6570;&#x8DEF;&#x7531;</p>
+<p><img src="index_files/ac03133c-8ecd-4378-8e4d-153fdc0d75da.png" alt=""></p>
+<p>&#x5355;&#x6570;&#x8DEF;&#x7531;</p>
+<p><img src="index_files/a8bb43c5-437e-48cf-8923-f6a825e71b66.png" alt=""></p>
+<hr>
+<h2 id="&#x63A5;&#x53E3;&#x8C03;&#x8BD5;"><a name="&#x63A5;&#x53E3;&#x8C03;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;&#x8C03;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;&#x8C03;&#x8BD5;</h2>
+<p>&#x9996;&#x5148;&#x521B;&#x5EFA; db.json &#x6570;&#x636E;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>{
+ &quot;posts&quot;: [
+ {
+   &quot;id&quot;: 1,
+   &quot;title&quot;: &quot;json-server&quot;,
+   &quot;author&quot;: &quot;typicode&quot;
+ },
+ {
+   &quot;id&quot;: 2,
+   &quot;title&quot;: &quot;zxw&quot;,
+   &quot;author&quot;: &quot;sutune&quot;
+ },
+ {
+   &quot;id&quot;: 3,
+   &quot;title&quot;: &quot;zxw666&quot;,
+   &quot;author&quot;: {&quot;name&quot;:&quot;jack&quot;}
+ },
+ {
+   &quot;id&quot;: 4,
+   &quot;title&quot;: &quot;zxw888&quot;,
+   &quot;author&quot;: &quot;Bob&quot;
+ }
+],
+ &quot;comments&quot;: [
+ {
+   &quot;id&quot;: 1,
+    &quot;body&quot;: &quot;some comment&quot;,
+   &quot;postId&quot;: 1
+ },
+ {
+   &quot;id&quot;: 2,
+   &quot;body&quot;: &quot;hello 51zxw&quot;,
+   &quot;postId&quot;: 2
+ },
+ {
+   &quot;id&quot;: 3,
+   &quot;body&quot;: &quot;hello zxw2018&quot;,
+   &quot;postId&quot;: 3
+ }
+],
+ &quot;profile&quot;: {
+   &quot;name&quot;: &quot;typicode&quot;
+ }
+}
+</code></pre><h3 id="&#x8FC7;&#x6EE4;"><a name="&#x8FC7;&#x6EE4;" class="anchor-navigation-ex-anchor" href="#&#x8FC7;&#x6EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FC7;&#x6EE4;</h3>
+<p>&#x4F7F;&#x7528;&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#x53C2;&#x6570;&#xFF08;Query String Parameters&#xFF09;&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;</p>
+<pre class="language-"><code>GET /posts?id=1&amp;id=2
+GET /posts?title=zxw
+</code></pre><p>&#x6307;&#x5B9A;&#x8FC7;&#x6EE4;&#x5B57;&#x6BB5;&#xFF0C;&#x4F7F;&#x7528;.&#x53F7;&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x66F4;&#x6DF1;&#x5C42;&#x6B21;&#x5C5E;&#x6027;</p>
+<pre class="language-"><code>GET /posts?author.name=jack
+</code></pre><p>&#x8BE6;&#x89C1;&#x89C6;&#x9891;&#x64CD;&#x4F5C;&#x6F14;&#x793A;</p>
+<h3 id="&#x5206;&#x9875;"><a name="&#x5206;&#x9875;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x9875;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5206;&#x9875;</h3>
+<p>&#x5206;&#x9875;&#x4E5F;&#x662F;&#x5E38;&#x7528;&#x529F;&#x80FD;&#xFF0C;&#x4F7F;&#x7528;_page &#x6307;&#x5B9A;&#x7B2C;&#x51E0;&#x9875;&#xFF0C;_limit &#x6307;&#x5B9A;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x6761;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x662F;&#x4E00;&#x9875;&#x663E;&#x793A; 10 &#x6761;&#x6570;&#x636E;&#x3002;</p>
+<pre class="language-"><code>GET /posts?_page=1
+GET /posts?_page=1&amp;_limit=2
+</code></pre><h3 id="&#x6392;&#x5E8F;"><a name="&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6392;&#x5E8F;</h3>
+<p>_sort &#x8868;&#x793A;&#x6392;&#x5E8F;&#x5B57;&#x6BB5;&#xFF0C;_order &#x8868;&#x793A;&#x5177;&#x4F53;&#x7684;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x5347;&#x5E8F;:asc &#x964D;&#x5E8F;&#x4E3A;&#xFF1A;desc&#x3002;</p>
+<pre class="language-"><code>GET /posts?_sort=id&amp;_order=asc #&#x5347;&#x5E8F;
+GET /posts?_sort=id&amp;_order=desc #&#x964D;&#x5E8F;
+</code></pre><p>&#x591A;&#x5B57;&#x6BB5;&#x7EC4;&#x5408;&#x6392;&#x5E8F;</p>
+<pre class="language-"><code>GET /posts?_sort=para1,para2&amp;_order=desc,asc
+</code></pre><h3 id="&#x5207;&#x7247;"><a name="&#x5207;&#x7247;" class="anchor-navigation-ex-anchor" href="#&#x5207;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5207;&#x7247;</h3>
+<p>&#x5207;&#x7247;&#x4E0E;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x5207;&#x7247;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x636E;&#x5185;&#x5BB9;&#xFF0C;&#x8D77;&#x59CB;&#x4E0B;&#x6807;&#x4E3A; 0</p>
+<p>&#x2022; _start &#x6307;&#x5B9A;&#x7EAA;&#x5F55;&#x8D77;&#x59CB;&#x70B9;&#xFF0C;&#x5305;&#x542B;&#x8D77;&#x70B9;
+&#x2022; _end &#x6307;&#x5B9A;&#x7EC8;&#x70B9;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x7EC8;&#x70B9;
+&#x2022; _limit &#x6307;&#x5B9A;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x91CF;</p>
+<pre class="language-"><code>GET /posts?_start=0&amp;_end=3
+GET /comments?_start=0&amp;_end=2
+GET /posts?_start=0&amp;_limit=2
+</code></pre><h3 id="&#x64CD;&#x4F5C;"><a name="&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;</h3>
+<p>&#x2022; _gte: &#x5927;&#x4E8E;
+&#x2022; _lte: &#x5C0F;&#x4E8E;
+&#x2022; _ne: &#x4E0D;&#x7B49;&#x4E8E;
+&#x2022; _like: &#x6709;&#x70B9;&#x50CF; sql &#x7684; like&#xFF0C;&#x652F;&#x6301;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</p>
+<pre class="language-"><code>GET /posts?id_gte=2&amp;id_lte=3
+GET /posts?id_ne=3
+GET /posts?title_like=zxw
+</code></pre><h3 id="&#x5168;&#x5C40;&#x641C;&#x7D22;"><a name="&#x5168;&#x5C40;&#x641C;&#x7D22;" class="anchor-navigation-ex-anchor" href="#&#x5168;&#x5C40;&#x641C;&#x7D22;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5168;&#x5C40;&#x641C;&#x7D22;</h3>
+<p>&#x4F7F;&#x7528; q &#x53C2;&#x6570;&#xFF0C;&#x6BD4;&#x5982;</p>
+<pre class="language-"><code>GET /comments?q=zxw
+</code></pre><h3 id="&#x67E5;&#x770B;-db"><a name="&#x67E5;&#x770B;-db" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;-db"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B; db</h3>
+<p>GET /db</p>
+<hr>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a name="&#x53C2;&#x8003;&#x8D44;&#x6599;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;&#x8D44;&#x6599;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<p>&#x2022; <a href="https://baike.baidu.com/item/mock" target="_blank">https://baike.baidu.com/item/mock</a> &#x6D4B;&#x8BD5;/5300937?fr=aladdin
+&#x2022; <a href="https://blog.csdn.net/eMac/article/details/71056826" target="_blank">https://blog.csdn.net/eMac/article/details/71056826</a>
+&#x2022; <a href="https://www.npmjs.com/package/json-server" target="_blank">https://www.npmjs.com/package/json-server</a>
+&#x2022; <a href="http://www.testclass.net/json_server/query/" target="_blank">http://www.testclass.net/json_server/query/</a></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/monsterone" target="_blank">monster</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2020-02-11 05:48:40 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Locust接口性能测试.html" class="navigation navigation-prev " aria-label="Previous page: 第5节：Locust接口性能测试">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="HttpRunner接口自动化测试框架.html" class="navigation navigation-next " aria-label="Next page: 第7节：HttpRunner接口自动化测试框架">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第6节：Mock利器——Json Server","level":"1.4.6","depth":2,"next":{"title":"第7节：HttpRunner接口自动化测试框架","level":"1.4.7","depth":2,"path":"第三章/HttpRunner接口自动化测试框架.md","ref":"第三章/HttpRunner接口自动化测试框架.md","articles":[]},"previous":{"title":"第5节：Locust接口性能测试","level":"1.4.5","depth":2,"path":"第三章/Locust接口性能测试.md","ref":"第三章/Locust接口性能测试.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","disqus","github-buttons","editlink","ga","-highlight","prism","bibtex-indexed-cite","anchor-navigation-ex","page-footer-ex","splitter","todo","copy-code-button","expandable-chapters-small","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"ignore":["mermaid","eval-js"],"css":["prismjs/themes/prism-solarizedlight.css"]},"disqus":{"useIdentifier":false,"shortName":"gitbook-template"},"editlink":{"label":"Edit","multilingual":false,"base":"https://github.com/monster/mybook/blob/master"},"todo":{},"page-footer-ex":{"copyright":"By [monster](https://github.com/monsterone)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"bibtex-indexed-cite":{"path":"/"},"github-buttons":{"buttons":[{"user":"monster","repo":"mybook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-131910384-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"接口","bib":[],"gitbook":"*"},"file":{"path":"第三章/Mock利器——Json Server.md","mtime":"2020-02-11T05:48:40.839Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-11T05:49:29.114Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

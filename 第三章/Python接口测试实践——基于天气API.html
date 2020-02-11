@@ -1,0 +1,771 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第2节：Python接口测试实践——基于天气API · 接口</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Restful接口开发与测试.html" />
+    
+    
+    <link rel="prev" href="Requests库使用.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"monster","repo":"mybook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第一章/">
+            
+                <a href="../第一章/">
+            
+                    
+                    第一章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第一章/课程简介&接口测试概述.html">
+            
+                <a href="../第一章/课程简介&接口测试概述.html">
+            
+                    
+                    第1节：课程简介&接口测试概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第一章/HTTP协议基础.html">
+            
+                <a href="../第一章/HTTP协议基础.html">
+            
+                    
+                    第2节：HTTP协议基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第一章/JSON数据.html">
+            
+                <a href="../第一章/JSON数据.html">
+            
+                    
+                    第3节：JSON数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第二章/">
+            
+                <a href="../第二章/">
+            
+                    
+                    第二章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第二章/Postman教案.html">
+            
+                <a href="../第二章/Postman教案.html">
+            
+                    
+                    第1节：Postman教案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第二章/Jmeter接口测试.html">
+            
+                <a href="../第二章/Jmeter接口测试.html">
+            
+                    
+                    第2节：Jmeter接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第二章/Jmeter+Ant+Jenkins接口自动化测试平台.html">
+            
+                <a href="../第二章/Jmeter+Ant+Jenkins接口自动化测试平台.html">
+            
+                    
+                    第3节：Jmeter+Ant+Jenkins接口自动化测试平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第二章/jmeter基础使用手册.html">
+            
+                <a href="../第二章/jmeter基础使用手册.html">
+            
+                    
+                    第4节：jmeter基础使用手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第三章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Requests库使用.html">
+            
+                <a href="Requests库使用.html">
+            
+                    
+                    第1节：Requests库使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="Python接口测试实践——基于天气API.html">
+            
+                <a href="Python接口测试实践——基于天气API.html">
+            
+                    
+                    第2节：Python接口测试实践——基于天气API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="Restful接口开发与测试.html">
+            
+                <a href="Restful接口开发与测试.html">
+            
+                    
+                    第3节：Restful接口开发与测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="Django数据管理.html">
+            
+                <a href="Django数据管理.html">
+            
+                    
+                    第4节：Django数据管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="Locust接口性能测试.html">
+            
+                <a href="Locust接口性能测试.html">
+            
+                    
+                    第5节：Locust接口性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="Mock利器——Json Server.html">
+            
+                <a href="Mock利器——Json Server.html">
+            
+                    
+                    第6节：Mock利器——Json Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="HttpRunner接口自动化测试框架.html">
+            
+                <a href="HttpRunner接口自动化测试框架.html">
+            
+                    
+                    第7节：HttpRunner接口自动化测试框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第四章/">
+            
+                <a href="../第四章/">
+            
+                    
+                    第四章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第四章/接口测试面试题.html">
+            
+                <a href="../第四章/接口测试面试题.html">
+            
+                    
+                    第1节：接口测试面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第2节：Python接口测试实践——基于天气API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;2&#x8282;&#xFF1A;python&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x8DF5;&#x2014;&#x2014;&#x57FA;&#x4E8E;&#x5929;&#x6C14;api"><b></b>&#x7B2C;2&#x8282;&#xFF1A;Python&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x8DF5;&#x2014;&#x2014;&#x57FA;&#x4E8E;&#x5929;&#x6C14;API</a></li><ul><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;"><b></b>&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;-api"><b></b>&#x6D4B;&#x8BD5; API</a></li><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;&#x573A;&#x666F;"><b></b>&#x6D4B;&#x8BD5;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><b></b>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</a></li></ul><li><span class="title-icon "></span><a href="#&#x96C6;&#x6210;&#x5230;-unittest"><b></b>&#x96C6;&#x6210;&#x5230; Unittest</a></li><ul><li><span class="title-icon "></span><a href="#&#x5E94;&#x7528;&#x80CC;&#x666F;"><b></b>&#x5E94;&#x7528;&#x80CC;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;"><b></b>&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;_1"><b></b>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#&#x751F;&#x6210;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;"><b></b>&#x751F;&#x6210;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;</a></li></ul></ul></ul></div><a href="#&#x7B2C;2&#x8282;&#xFF1A;python&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x8DF5;&#x2014;&#x2014;&#x57FA;&#x4E8E;&#x5929;&#x6C14;api" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;2&#x8282;&#xFF1A;python&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x8DF5;&#x2014;&#x2014;&#x57FA;&#x4E8E;&#x5929;&#x6C14;api"><a name="&#x7B2C;2&#x8282;&#xFF1A;python&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x8DF5;&#x2014;&#x2014;&#x57FA;&#x4E8E;&#x5929;&#x6C14;api" class="anchor-navigation-ex-anchor" href="#&#x7B2C;2&#x8282;&#xFF1A;python&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x8DF5;&#x2014;&#x2014;&#x57FA;&#x4E8E;&#x5929;&#x6C14;api"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;2&#x8282;&#xFF1A;Python&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x8DF5;&#x2014;&#x2014;&#x57FA;&#x4E8E;&#x5929;&#x6C14;API</h1>
+<h2 id="&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;"><a name="&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;</h2>
+<h3 id="&#x6D4B;&#x8BD5;-api"><a name="&#x6D4B;&#x8BD5;-api" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;-api"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5; API</h3>
+<p>&#x6D4B;&#x8BD5;&#x7684; API &#x4E3A;&#xFF1A;&#x5929;&#x6C14; API
+&#x2022; &#x63A5;&#x53E3; URL&#xFF1A;<a href="https://www.sojson.com/open/api/weather/json.shtml" target="_blank">https://www.sojson.com/open/api/weather/json.shtml</a>
+&#x2022; &#x8BF7;&#x6C42;&#x65B9;&#x5F0F;:GET
+&#x2022; &#x53C2;&#x6570;&#xFF1A;city &#x4E3A;&#x57CE;&#x5E02;&#x540D;&#x79F0;(&#x4EC5;&#x652F;&#x6301;&#x56FD;&#x5185;&#x57CE;&#x5E02;)&#xFF0C;&#x652F;&#x6301;&#x7684;&#x57CE;&#x5E02;&#x53EF;&#x4EE5;&#x5E26;&#x4E0A;&#x5E02;&#x3001;&#x53BF;&#x3001;&#x533A;&#x4E4B;&#x7C7B;,&#x5982;&#xFF1A;&#x5317;&#x4EAC;,&#x6DF1;&#x5733;&#x3001;&#x5357;&#x5C71;&#x533A;&#x3001;
+&#x957F;&#x6C99;&#x5E02;&#x3001;&#x957F;&#x6C99;&#x7B49;&#x7B49;&#x3002;
+&#x2022; &#x8FD4;&#x56DE;&#x503C;&#x683C;&#x5F0F;&#x5982;&#x4E0B;(&#x67E5;&#x8BE2;&#x57CE;&#x5E02;&#x4E3A;&#x5317;&#x4EAC;)&#xFF1A;</p>
+<pre class="language-"><code>{
+&quot;date&quot;: &quot;20180815&quot;,
+&quot;message&quot;: &quot;Success !&quot;,
+&quot;status&quot;: 200,
+&quot;city&quot;: &quot;&#x5317;&#x4EAC;&quot;,
+&quot;count&quot;: 22,
+&quot;data&quot;: {
+        &quot;shidu&quot;: &quot;86%&quot;,
+        &quot;pm25&quot;: 13.0,
+        &quot;pm10&quot;: 27.0,
+        &quot;quality&quot;: &quot;&#x4F18;&quot;,
+        &quot;wendu&quot;: &quot;25&quot;,
+        &quot;ganmao&quot;: &quot;&#x5404;&#x7C7B;&#x4EBA;&#x7FA4;&#x53EF;&#x81EA;&#x7531;&#x6D3B;&#x52A8;&quot;,
+        &quot;yesterday&quot;: {
+        &quot;date&quot;: &quot;14 &#x65E5;&#x661F;&#x671F;&#x4E8C;&quot;,
+        &quot;sunrise&quot;: &quot;05:23&quot;,
+        &quot;high&quot;: &quot;&#x9AD8;&#x6E29; 29.0&#x2103;&quot;,
+        &quot;low&quot;: &quot;&#x4F4E;&#x6E29; 24.0&#x2103;&quot;,
+        &quot;sunset&quot;: &quot;19:14&quot;,
+        &quot;aqi&quot;: 20.0,
+        &quot;fx&quot;: &quot;&#x4E1C;&#x98CE;&quot;,
+        &quot;fl&quot;: &quot;&lt;3 &#x7EA7;&quot;,
+        &quot;type&quot;: &quot;&#x96F7;&#x9635;&#x96E8;&quot;,&quot;notice&quot;: &quot;&#x5E26;&#x597D;&#x96E8;&#x5177;&#xFF0C;&#x522B;&#x5728;&#x6811;&#x4E0B;&#x8EB2;&#x96E8;&quot;
+        },
+&quot;forecast&quot;: [{
+        &quot;date&quot;: &quot;15 &#x65E5;&#x661F;&#x671F;&#x4E09;&quot;,
+        &quot;sunrise&quot;: &quot;05:24&quot;,
+        &quot;high&quot;: &quot;&#x9AD8;&#x6E29; 32.0&#x2103;&quot;,
+        &quot;low&quot;: &quot;&#x4F4E;&#x6E29; 24.0&#x2103;&quot;,
+        &quot;sunset&quot;: &quot;19:12&quot;,
+        &quot;aqi&quot;: 34.0,
+        &quot;fx&quot;: &quot;&#x4E1C;&#x5317;&#x98CE;&quot;,
+        &quot;fl&quot;: &quot;3-4 &#x7EA7;&quot;,
+        &quot;type&quot;: &quot;&#x591A;&#x4E91;&quot;,
+        &quot;notice&quot;: &quot;&#x9634;&#x6674;&#x4E4B;&#x95F4;&#xFF0C;&#x8C28;&#x9632;&#x7D2B;&#x5916;&#x7EBF;&#x4FB5;&#x6270;&quot;
+        }, {
+        &quot;date&quot;: &quot;16 &#x65E5;&#x661F;&#x671F;&#x56DB;&quot;,
+        &quot;sunrise&quot;: &quot;05:25&quot;,
+        &quot;high&quot;: &quot;&#x9AD8;&#x6E29; 30.0&#x2103;&quot;,
+        &quot;low&quot;: &quot;&#x4F4E;&#x6E29; 22.0&#x2103;&quot;,
+        &quot;sunset&quot;: &quot;19:11&quot;,
+        &quot;aqi&quot;: 43.0,
+        &quot;fx&quot;: &quot;&#x65E0;&#x6301;&#x7EED;&#x98CE;&#x5411;&quot;,
+        &quot;fl&quot;: &quot;&lt;3 &#x7EA7;&quot;,
+        &quot;type&quot;: &quot;&#x591A;&#x4E91;&quot;,
+        &quot;notice&quot;: &quot;&#x9634;&#x6674;&#x4E4B;&#x95F4;&#xFF0C;&#x8C28;&#x9632;&#x7D2B;&#x5916;&#x7EBF;&#x4FB5;&#x6270;&quot;
+        }, {
+        &quot;date&quot;: &quot;17 &#x65E5;&#x661F;&#x671F;&#x4E94;&quot;,
+        &quot;sunrise&quot;: &quot;05:26&quot;,
+        &quot;high&quot;: &quot;&#x9AD8;&#x6E29; 29.0&#x2103;&quot;,
+        &quot;low&quot;: &quot;&#x4F4E;&#x6E29; 22.0&#x2103;&quot;,
+        &quot;sunset&quot;: &quot;19:10&quot;,
+        &quot;aqi&quot;: 61.0,
+        &quot;fx&quot;: &quot;&#x4E1C;&#x5357;&#x98CE;&quot;,
+        &quot;fl&quot;: &quot;&lt;3 &#x7EA7;&quot;,
+        &quot;type&quot;: &quot;&#x9634;&quot;,
+        &quot;notice&quot;: &quot;&#x4E0D;&#x8981;&#x88AB;&#x9634;&#x4E91;&#x906E;&#x6321;&#x4F4F;&#x597D;&#x5FC3;&#x60C5;&quot;
+        }, {
+        &quot;date&quot;: &quot;18 &#x65E5;&#x661F;&#x671F;&#x516D;&quot;,
+        &quot;sunrise&quot;: &quot;05:27&quot;,
+        &quot;high&quot;: &quot;&#x9AD8;&#x6E29; 30.0&#x2103;&quot;,
+        &quot;low&quot;: &quot;&#x4F4E;&#x6E29; 22.0&#x2103;&quot;,
+        &quot;sunset&quot;: &quot;19:08&quot;,
+        &quot;aqi&quot;: 65.0,
+        &quot;fx&quot;: &quot;&#x4E1C;&#x5357;&#x98CE;&quot;,
+        &quot;fl&quot;: &quot;&lt;3 &#x7EA7;&quot;,
+        &quot;type&quot;: &quot;&#x591A;&#x4E91;&quot;,&quot;notice&quot;: &quot;&#x9634;&#x6674;&#x4E4B;&#x95F4;&#xFF0C;&#x8C28;&#x9632;&#x7D2B;&#x5916;&#x7EBF;&#x4FB5;&#x6270;&quot;
+        }, {
+        &quot;date&quot;: &quot;19 &#x65E5;&#x661F;&#x671F;&#x65E5;&quot;,
+        &quot;sunrise&quot;: &quot;05:28&quot;,
+        &quot;high&quot;: &quot;&#x9AD8;&#x6E29; 31.0&#x2103;&quot;,
+        &quot;low&quot;: &quot;&#x4F4E;&#x6E29; 21.0&#x2103;&quot;,
+        &quot;sunset&quot;: &quot;19:07&quot;,
+        &quot;aqi&quot;: 67.0,
+        &quot;fx&quot;: &quot;&#x4E1C;&#x5357;&#x98CE;&quot;,
+        &quot;fl&quot;: &quot;&lt;3 &#x7EA7;&quot;,
+        &quot;type&quot;: &quot;&#x6674;&quot;,
+        &quot;notice&quot;: &quot;&#x613F;&#x4F60;&#x62E5;&#x6709;&#x6BD4;&#x9633;&#x5149;&#x660E;&#x5A9A;&#x7684;&#x5FC3;&#x60C5;&quot;
+        }]
+}
+}
+</code></pre><h3 id="&#x6D4B;&#x8BD5;&#x573A;&#x666F;"><a name="&#x6D4B;&#x8BD5;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;&#x573A;&#x666F;</h3>
+<p>&#x901A;&#x8FC7;&#x63A5;&#x53E3;&#x6765;&#x67E5;&#x8BE2; &#x5317;&#x4EAC; &#x7684;&#x5929;&#x6C14;&#x4FE1;&#x606F;</p>
+<h3 id="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><a name="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h3>
+<p><strong>weather_api_test.py</strong></p>
+<pre class="language-"><code>import requests
+from urllib import parse
+
+#&#x6784;&#x9020;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x6570;&#x636E;
+data={&apos;city&apos;:&apos;&#x5317;&#x4EAC;&apos;}
+city=parse.urlencode(data).encode(&apos;utf-8&apos;)
+url=&apos;https://www.sojson.com/open/api/weather/json.shtml&apos;
+
+#&#x53D1;&#x9001;&#x8BF7;&#x6C42;
+r=requests.get(url,params=city)
+# print(r.text)
+
+#&#x5C06;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x8F6C;&#x5316;&#x4E3A; Json &#x7C7B;&#x578B;
+response_data=r.json()#&#x5206;&#x522B;&#x83B7;&#x53D6;&#x65E5;&#x671F;&#xFF0C;&#x54CD;&#x5E94;&#x4FE1;&#x606F;&#xFF0C;&#x72B6;&#x6001;&#x3001;&#x548C;&#x57CE;&#x5E02;
+print(response_data[&apos;date&apos;])
+print(response_data[&apos;message&apos;])
+print(response_data[&apos;status&apos;])
+print(response_data[&apos;city&apos;])
+
+#&#x83B7;&#x53D6;&#x5F53;&#x65E5;&#x5929;&#x6C14;
+print(response_data[&apos;data&apos;][&apos;forecast&apos;][0][&apos;date&apos;])
+print(response_data[&apos;data&apos;][&apos;forecast&apos;][0][&apos;type&apos;])
+print(response_data[&apos;data&apos;][&apos;forecast&apos;][0][&apos;high&apos;])
+print(response_data[&apos;data&apos;][&apos;forecast&apos;][0][&apos;low&apos;])
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;
+&#x2022; &#x6BCF;&#x4E2A; IP &#x65E5;&#x8C03;&#x7528;&#x989D;&#x5EA6; 2000 &#x6B21;&#xFF0C;&#x8D85;&#x8FC7;&#x8FC7;&#x591A;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x5C01;&#x6389; IP &#x6BB5;&#x3002;
+&#x2022; &#x6BCF;&#x6B21;&#x8BF7;&#x6C42;&#x95F4;&#x9694;&#x5FC5;&#x987B; 3 &#x79D2;&#x4E00;&#x6B21;&#xFF0C;&#x5982;&#x679C;&#x591A;&#x6B21;&#x8D85;&#x8FC7; 3 &#x79D2;&#x5185;&#x8C03;&#x7528;&#x591A;&#x6B21;&#xFF0C;&#x4F1A;&#x5C01;&#x6389; IP &#x6BB5;
+&#x2022; <a href="https://www.sojson.com/blog/234.html" target="_blank">&#x66F4;&#x591A;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</a></p>
+<hr>
+<h2 id="&#x96C6;&#x6210;&#x5230;-unittest"><a name="&#x96C6;&#x6210;&#x5230;-unittest" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x6210;&#x5230;-unittest"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96C6;&#x6210;&#x5230; Unittest</h2>
+<h3 id="&#x5E94;&#x7528;&#x80CC;&#x666F;"><a name="&#x5E94;&#x7528;&#x80CC;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;&#x80CC;&#x666F;</h3>
+<p>&#x4E0A;&#x9762;&#x7684;&#x6848;&#x4F8B;&#x53EA;&#x662F;&#x9488;&#x5BF9;&#x5355;&#x4E2A;&#x573A;&#x666F;&#x8FDB;&#x4E86;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x7684;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x9700;&#x8981;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#x573A;&#x666F;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x53E6;&#x5916;&#x8FD8;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x65AD;&#x8A00;&#xFF0C;&#x751F;&#x6210;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;&#x3002;</p>
+<h3 id="&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;"><a name="&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;</h3>
+<p><img src="index_files/d5fa8e6e-e327-4489-9ef5-9588c79ae231.png" alt=""></p>
+<h3 id="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;_1"><a name="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;_1" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h3>
+<p>weather_api_unittest.py</p>
+<pre class="language-"><code>import unittest
+import requests
+from urllib import parse
+from time import sleep
+class WeatherTest(unittest.TestCase):
+    def setUp(self):
+        self.url=&apos;https://www.sojson.com/open/api/weather/json.shtml&apos;
+        #&#x4EE3;&#x7406;&#x8BBE;&#x7F6E;&#xFF0C;&#x907F;&#x514D; ip &#x88AB;&#x5C01;
+        # self.proxies={&apos;http&apos;:&apos;http://125.118.146.222:6666&apos;}
+
+    def test_weather_beijing(self):
+        &apos;&apos;&apos;&#x6D4B;&#x8BD5;&#x5317;&#x4EAC;&#x5929;&#x6C14;&apos;&apos;&apos;
+        data = {&apos;city&apos;: &apos;&#x5317;&#x4EAC;&apos;}
+        city = parse.urlencode(data).encode(&apos;utf-8&apos;)
+        # r=requests.get(self.url,params=city,proxies=self.proxies)
+        r=requests.get(self.url,params=city)
+        result=r.json()
+        #&#x65AD;&#x8A00; self.assertEqual(result[&apos;status&apos;],200)
+        self.assertEqual(result[&apos;message&apos;],&apos;Success !&apos;)
+        self.assertEqual(result[&apos;city&apos;],&apos;&#x5317;&#x4EAC;&apos;)
+        #&#x8BBE;&#x7F6E;&#x95F4;&#x9694;&#x65F6;&#x95F4;&#xFF0C;&#x907F;&#x514D; ip &#x88AB;&#x5C01;
+        sleep(3)
+
+
+    def test_weather_param_error(self):
+        &apos;&apos;&apos;&#x53C2;&#x6570;&#x5F02;&#x5E38;&apos;&apos;&apos;
+        data={&apos;city&apos;:&apos;666&apos;}
+        # r=requests.get(self.url,params=data,proxies=self.proxies)
+        r=requests.get(self.url,params=data)
+        result=r.json()
+        self.assertEqual(result[&apos;message&apos;],&apos;Check the parameters.&apos;)
+        sleep(3)
+
+    def test_weather_no_param(self):
+        &apos;&apos;&apos;&#x53C2;&#x6570;&#x7F3A;&#x7701;&apos;&apos;&apos;
+        # r=requests.get(self.url,params=data,proxies=self.proxies)
+        r=requests.get(self.url)
+        result=r.json()
+        self.assertEqual(result[&apos;message&apos;],&apos;Check the parameters.&apos;)
+        self.assertEqual(result[&apos;status&apos;],400)
+        sleep(3)
+if __name__ == &apos;__main__&apos;:
+    unittest.main()
+</code></pre><p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>C:\Python35\python.exe D:/api_test/requests_api_test/weather_api_unittest.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 10.312s
+OK
+Process finished with exit code 0\
+</code></pre><h3 id="&#x751F;&#x6210;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;"><a name="&#x751F;&#x6210;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;" class="anchor-navigation-ex-anchor" href="#&#x751F;&#x6210;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x751F;&#x6210;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;</h3>
+<p>&#x2022; &#x9996;&#x5148;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939; reports &#x548C; test_case
+&#x2022; &#x4E0B;&#x8F7D; BSTestRunner
+&#x2022; &#x521B;&#x5EFA; run.py &#x6A21;&#x5757;</p>
+<p><strong>run.py</strong></p>
+<pre class="language-"><code>import unittest
+from BSTestRunner import BSTestRunner
+import time
+
+
+#&#x6307;&#x5B9A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x548C;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;&#x7684;&#x8DEF;&#x5F84;
+test_dir = &apos;./test_case&apos;
+report_dir = &apos;./reports&apos;
+
+#&#x52A0;&#x8F7D;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;
+discover = unittest.defaultTestLoader.discover(test_dir, pattern=&apos;test_weather.py&apos;)
+
+#&#x5B9A;&#x4E49;&#x62A5;&#x544A;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;
+now = time.strftime(&quot;%Y-%m-%d %H_%M_%S&quot;)
+report_name = report_dir + &apos;/&apos; + now + &apos; test_report.html&apos;
+
+#&#x8FD0;&#x884C;&#x7528;&#x4F8B;&#x5E76;&#x751F;&#x6210;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;
+with open(report_name, &apos;wb&apos;) as f:
+    runner = BSTestRunner(stream=f, title=&quot;Weather API Test Report&quot;, description=&quot;China City Weather TestReport&quot;)
+runner.run(discover)
+</code></pre><p>&#x8FD0;&#x884C;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/8c409c39-c362-498c-80ca-ce38f9c0f79c.jpg" alt=""></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/monsterone" target="_blank">monster</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2020-02-11 05:48:40 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Requests库使用.html" class="navigation navigation-prev " aria-label="Previous page: 第1节：Requests库使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Restful接口开发与测试.html" class="navigation navigation-next " aria-label="Next page: 第3节：Restful接口开发与测试">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第2节：Python接口测试实践——基于天气API","level":"1.4.2","depth":2,"next":{"title":"第3节：Restful接口开发与测试","level":"1.4.3","depth":2,"path":"第三章/Restful接口开发与测试.md","ref":"第三章/Restful接口开发与测试.md","articles":[]},"previous":{"title":"第1节：Requests库使用","level":"1.4.1","depth":2,"path":"第三章/Requests库使用.md","ref":"第三章/Requests库使用.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","disqus","github-buttons","editlink","ga","-highlight","prism","bibtex-indexed-cite","anchor-navigation-ex","page-footer-ex","splitter","todo","copy-code-button","expandable-chapters-small","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"ignore":["mermaid","eval-js"],"css":["prismjs/themes/prism-solarizedlight.css"]},"disqus":{"useIdentifier":false,"shortName":"gitbook-template"},"editlink":{"label":"Edit","multilingual":false,"base":"https://github.com/monster/mybook/blob/master"},"todo":{},"page-footer-ex":{"copyright":"By [monster](https://github.com/monsterone)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"bibtex-indexed-cite":{"path":"/"},"github-buttons":{"buttons":[{"user":"monster","repo":"mybook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-131910384-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"接口","bib":[],"gitbook":"*"},"file":{"path":"第三章/Python接口测试实践——基于天气API.md","mtime":"2020-02-11T05:48:40.839Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-11T05:49:29.114Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

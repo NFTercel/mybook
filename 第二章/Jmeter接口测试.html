@@ -1,0 +1,965 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第2节：Jmeter接口测试 · 接口</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Jmeter+Ant+Jenkins接口自动化测试平台.html" />
+    
+    
+    <link rel="prev" href="Postman教案.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"monster","repo":"mybook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第一章/">
+            
+                <a href="../第一章/">
+            
+                    
+                    第一章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第一章/课程简介&接口测试概述.html">
+            
+                <a href="../第一章/课程简介&接口测试概述.html">
+            
+                    
+                    第1节：课程简介&接口测试概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第一章/HTTP协议基础.html">
+            
+                <a href="../第一章/HTTP协议基础.html">
+            
+                    
+                    第2节：HTTP协议基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第一章/JSON数据.html">
+            
+                <a href="../第一章/JSON数据.html">
+            
+                    
+                    第3节：JSON数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Postman教案.html">
+            
+                <a href="Postman教案.html">
+            
+                    
+                    第1节：Postman教案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="Jmeter接口测试.html">
+            
+                <a href="Jmeter接口测试.html">
+            
+                    
+                    第2节：Jmeter接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="Jmeter+Ant+Jenkins接口自动化测试平台.html">
+            
+                <a href="Jmeter+Ant+Jenkins接口自动化测试平台.html">
+            
+                    
+                    第3节：Jmeter+Ant+Jenkins接口自动化测试平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="jmeter基础使用手册.html">
+            
+                <a href="jmeter基础使用手册.html">
+            
+                    
+                    第4节：jmeter基础使用手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第三章/">
+            
+                <a href="../第三章/">
+            
+                    
+                    第三章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第三章/Requests库使用.html">
+            
+                <a href="../第三章/Requests库使用.html">
+            
+                    
+                    第1节：Requests库使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第三章/Python接口测试实践——基于天气API.html">
+            
+                <a href="../第三章/Python接口测试实践——基于天气API.html">
+            
+                    
+                    第2节：Python接口测试实践——基于天气API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第三章/Restful接口开发与测试.html">
+            
+                <a href="../第三章/Restful接口开发与测试.html">
+            
+                    
+                    第3节：Restful接口开发与测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第三章/Django数据管理.html">
+            
+                <a href="../第三章/Django数据管理.html">
+            
+                    
+                    第4节：Django数据管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第三章/Locust接口性能测试.html">
+            
+                <a href="../第三章/Locust接口性能测试.html">
+            
+                    
+                    第5节：Locust接口性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../第三章/Mock利器——Json Server.html">
+            
+                <a href="../第三章/Mock利器——Json Server.html">
+            
+                    
+                    第6节：Mock利器——Json Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../第三章/HttpRunner接口自动化测试框架.html">
+            
+                <a href="../第三章/HttpRunner接口自动化测试框架.html">
+            
+                    
+                    第7节：HttpRunner接口自动化测试框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第四章/">
+            
+                <a href="../第四章/">
+            
+                    
+                    第四章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第四章/接口测试面试题.html">
+            
+                <a href="../第四章/接口测试面试题.html">
+            
+                    
+                    第1节：接口测试面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第2节：Jmeter接口测试</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;2&#x8282;&#xFF1A;jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;"><b></b>&#x7B2C;2&#x8282;&#xFF1A;Jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;</a></li><li><span class="title-icon "></span><a href="#jmeter&#x6982;&#x8FF0;"><b></b>Jmeter&#x6982;&#x8FF0;</a></li><ul><li><span class="title-icon "></span><a href="#jmeter&#x7B80;&#x4ECB;"><b></b>Jmeter&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#jmeter&#x529F;&#x80FD;"><b></b>Jmeter&#x529F;&#x80FD;</a></li><li><span class="title-icon "></span><a href="#jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;"><b></b>Jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;</a></li></ul><li><span class="title-icon "></span><a href="#jmeter&#x5B89;&#x88C5;&#x542F;&#x52A8;"><b></b>Jmeter&#x5B89;&#x88C5;&#x542F;&#x52A8;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"><b></b>&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x8BF4;&#x660E;"><b></b>&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#&#x542F;&#x52A8;&#x8F6F;&#x4EF6;"><b></b>&#x542F;&#x52A8;&#x8F6F;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x6218;"><b></b>Jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x6218;</a></li><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;api"><b></b>&#x6D4B;&#x8BD5;API</a></li><li><span class="title-icon "></span><a href="#&#x53D1;&#x9001;get&#x8BF7;&#x6C42;"><b></b>&#x53D1;&#x9001;Get&#x8BF7;&#x6C42;</a></li><li><span class="title-icon "></span><a href="#&#x53D1;&#x9001;post&#x8BF7;&#x6C42;"><b></b>&#x53D1;&#x9001;POST&#x8BF7;&#x6C42;</a></li><li><span class="title-icon "></span><a href="#http&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;"><b></b>HTTP&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;</a></li><li><span class="title-icon "></span><a href="#&#x65AD;&#x8A00;&#x8BBE;&#x7F6E;"><b></b>&#x65AD;&#x8A00;&#x8BBE;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x6570;&#x8BBE;&#x7F6E;"><b></b>&#x53C2;&#x6570;&#x8BBE;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#query-string-parameters"><b></b>Query String Parameters</a></li><li><span class="title-icon "></span><a href="#request-body"><b></b>Request body</a></li></ul><li><span class="title-icon "></span><a href="#&#x53D8;&#x91CF;"><b></b>&#x53D8;&#x91CF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><b></b>&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#&#x51FD;&#x6570;&#x751F;&#x6210;&#x53D8;&#x91CF;"><b></b>&#x51FD;&#x6570;&#x751F;&#x6210;&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#bean-shel&#x53D8;&#x91CF;"><b></b>Bean Shel&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#bean-shell-&#x5E38;&#x7528;&#x5185;&#x7F6E;&#x53D8;&#x91CF;"><b></b>Bean Shell &#x5E38;&#x7528;&#x5185;&#x7F6E;&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#csv-&#x6570;&#x636E;&#x6587;&#x4EF6;&#x53D8;&#x91CF;"><b></b>CSV &#x6570;&#x636E;&#x6587;&#x4EF6;&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#csv-&#x53C2;&#x6570;&#x5316;"><b></b>CSV &#x53C2;&#x6570;&#x5316;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6B63;&#x5219;&#x5339;&#x914D;"><b></b>&#x6B63;&#x5219;&#x5339;&#x914D;</a></li><ul><li><span class="title-icon "></span><a href="#&#x95EE;&#x9898;&#x601D;&#x8003;"><b></b>&#x95EE;&#x9898;&#x601D;&#x8003;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x6848;&#x4F8B;"><b></b>&#x64CD;&#x4F5C;&#x6848;&#x4F8B;</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;"><b></b>&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x914D;&#x7F6E;&#x8868;"><b></b>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x914D;&#x7F6E;&#x8868;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7528;&#x4F8B;&#x6570;&#x636E;&#x5206;&#x79BB;"><b></b>&#x7528;&#x4F8B;&#x6570;&#x636E;&#x5206;&#x79BB;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;"><b></b>&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;</a></li><li><span class="title-icon "></span><a href="#jmeter-&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;"><b></b>Jmeter &#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x5C0F;&#x7ED3;"><b></b>&#x5C0F;&#x7ED3;</a></li></ul><li><span class="title-icon "></span><a href="#cookie-&#x8BBE;&#x7F6E;"><b></b>Cookie &#x8BBE;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#http-cookie-&#x7BA1;&#x7406;&#x5668;"><b></b>HTTP Cookie &#x7BA1;&#x7406;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x6848;&#x4F8B;&#x5B9E;&#x8DF5;"><b></b>&#x6848;&#x4F8B;&#x5B9E;&#x8DF5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6388;&#x6743;&#x8BBE;&#x7F6E;"><b></b>&#x6388;&#x6743;&#x8BBE;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5E94;&#x7528;&#x80CC;&#x666F;"><b></b>&#x5E94;&#x7528;&#x80CC;&#x666F;</a></li><li><span class="title-icon "></span><a href="#basic-auth"><b></b>Basic Auth</a></li><li><span class="title-icon "></span><a href="#digest-auth"><b></b>Digest Auth</a></li></ul><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;&#x62A5;&#x544A;"><b></b>&#x6D4B;&#x8BD5;&#x62A5;&#x544A;</a></li><ul><li><span class="title-icon "></span><a href="#&#x805A;&#x5408;&#x62A5;&#x544A;"><b></b>&#x805A;&#x5408;&#x62A5;&#x544A;</a></li><li><span class="title-icon "></span><a href="#html-&#x62A5;&#x544A;"><b></b>HTML &#x62A5;&#x544A;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;"><b></b>&#x53C2;&#x8003;&#x8D44;&#x6599;</a></li></ul></ul></div><a href="#&#x7B2C;2&#x8282;&#xFF1A;jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;2&#x8282;&#xFF1A;jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;"><a name="&#x7B2C;2&#x8282;&#xFF1A;jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;2&#x8282;&#xFF1A;jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;2&#x8282;&#xFF1A;Jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;</h1>
+<h1 id="jmeter&#x6982;&#x8FF0;"><a name="jmeter&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#jmeter&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>Jmeter&#x6982;&#x8FF0;</h1>
+<hr>
+<h2 id="jmeter&#x7B80;&#x4ECB;"><a name="jmeter&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#jmeter&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>Jmeter&#x7B80;&#x4ECB;</h2>
+<p><a href="https://jmeter.apache.org/" target="_blank">Apache JMeter</a>&#x662F; Apache&#x7EC4;&#x7EC7;&#x7684;&#x5F00;&#x653E;&#x6E90;&#x4EE3;&#x7801;&#x9879;&#x76EE;,&#x662F;&#x4E00;&#x4E2A;&#x7EAF;Java&#x684C;&#x9762;&#x5E94;&#x7528;,&#x7528;&#x4E8E;&#x538B;&#x529B;&#x6D4B;&#x8BD5;&#x548C;&#x6027;&#x80FD;&#x6D4B;&#x8BD5;.&#x5B83;&#x6700;&#x521D;&#x88AB;&#x8BBE;&#x8BA1;&#x7528;&#x4E8E;Web&#x5E94;&#x7528;&#x6D4B;&#x8BD5;&#x4F46;&#x540E;&#x6765;&#x6269;&#x5C55;&#x5230;&#x5176;&#x5B83;&#x6D4B;&#x8BD5;&#x9886;&#x57DF;</p>
+<h2 id="jmeter&#x529F;&#x80FD;"><a name="jmeter&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#jmeter&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>Jmeter&#x529F;&#x80FD;</h2>
+<ul>
+<li>&#x80FD;&#x591F;&#x5BF9;HTP&#x548C;FTP&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x538B;&#x529B;&#x548C;&#x6027;&#x80FD;&#x6D4B;&#x8BD5;,&#x4E5F;&#x53EF;&#x4EE5;&#x5BF9;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x540C;&#x6837;&#x7684;&#x6D4B;&#x8BD5;(&#x901A;&#x8FC7;JDBC)&#x3002;</li>
+<li>&#x5B8C;&#x5168;&#x7684;&#x53EF;&#x79FB;&#x690D;&#x6027;&#x548C;100%&#x7EAF;java&#x3002;</li>
+<li>&#x5B8C;&#x5168; Swing(ava&#x8BBE;&#x8BA1;&#x7684;GU&#x5DE5;&#x5177;&#x5305;)&#x548C;&#x8F7B;&#x91CF;&#x7EC4;&#x4EF6;&#x652F;&#x6301;&#x3002;</li>
+<li>&#x5B8C;&#x5168;&#x591A;&#x7EBF;&#x7A0B;&#x6846;&#x67B6;&#x5141;&#x8BB8;&#x901A;&#x8FC7;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x5E76;&#x53D1;&#x53D6;&#x6837;&#x548C;&#x901A;&#x8FC7;&#x5355;&#x72EC;&#x7684;&#x7EBF;&#x7A0B;&#x7EC4;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x529F;&#x80FD;&#x540C;&#x65F6;&#x53D6;&#x6837;&#x3002;</li>
+<li>&#x7CBE;&#x5FC3;&#x7684;GU&#x8BBE;&#x8BA1;&#x5141;&#x8BB8;&#x5FEB;&#x901F;&#x64CD;&#x4F5C;&#x548C;&#x66F4;&#x7CBE;&#x786E;&#x7684;&#x8BA1;&#x65F6;&#x3002;</li>
+<li>&#x7F13;&#x5B58;&#x548C;&#x79BB;&#x7EBF;&#x5206;&#x6790;/&#x56DE;&#x653E;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x3002;</li>
+</ul>
+<h2 id="jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;"><a name="jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;</h2>
+<p>Jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x7684;&#x7B80;&#x5355;&#x64CD;&#x4F5C;&#x5305;&#x62EC;&#x505A;http&#x811A;&#x672C;&#x7F16;&#x8F91;(&#x53D1;get/post&#x8BF7;&#x6C42;cookie&#x8BBE;&#x7F6E;header&#x8BBE;&#x7F6E;&#x3001;&#x6743;&#x9650;&#x8BA4;&#x8BC1;)&#x53C2;&#x6570;&#x5316;&#x3001;&#x65AD;&#x8A00;&#x3001;&#x5173;&#x8054;&#x548C;&#x6570;&#x636E;&#x9A71;&#x52A8;&#x7B49;&#x7B49;&#x3002;</p>
+<h1 id="jmeter&#x5B89;&#x88C5;&#x542F;&#x52A8;"><a name="jmeter&#x5B89;&#x88C5;&#x542F;&#x52A8;" class="anchor-navigation-ex-anchor" href="#jmeter&#x5B89;&#x88C5;&#x542F;&#x52A8;"><i class="fa fa-link" aria-hidden="true"></i></a>Jmeter&#x5B89;&#x88C5;&#x542F;&#x52A8;</h1>
+<h2 id="&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"><a name="&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</h2>
+<ul>
+<li><a href="https://jmeter.apache.org/download_jmeter.cgi" target="_blank">Jmeter&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a></li>
+<li><a href="https://jmeter.apache.org/usermanual/get-started.html" target="_blank">Jmeter&#x5B98;&#x65B9;&#x6587;&#x6863;</a></li>
+<li><a href="http://www.51zxw.net/list.aspx?page=2&amp;cid=520" target="_blank">Jmeter&#x57FA;&#x7840;&#x6559;&#x7A0B;</a></li>
+</ul>
+<h2 id="&#x8BF4;&#x660E;"><a name="&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BF4;&#x660E;</h2>
+<p>&#x4E00;&#x822C;&#x5F00;&#x653E;&#x539F;&#x4EE3;&#x7801;&#x8F6F;&#x4EF6;&#x90FD;&#x4F1A;&#x6709;&#x4E24;&#x4E2A;&#x7248;&#x672C;&#x53D1;&#x5E03;: Source&#x548C; Binary</p>
+<ul>
+<li>Source&#x662F;&#x6E90;&#x4EE3;&#x7801;&#x7248;,&#x4F60;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x7F16;&#x8BD1;&#x6210;&#x53EF;&#x6267;&#x884C;&#x8F6F;&#x4EF6;&#x3002;</li>
+<li>Binary&#x662F;&#x53EF;&#x6267;&#x884C;&#x7248;,&#x76F4;&#x63A5;&#x53EF;&#x4EE5;&#x62FF;&#x6765;&#x7528;&#x7684;,&#x4ED6;&#x5DF2;&#x7ECF;&#x7ED9;&#x4F60;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x7248;&#x672C;&#x3002;</li>
+<li>&#x4E0B;&#x8F7D;&#x540E;,&#x89E3;&#x538B;&#x6587;&#x4EF6;&#x5230;&#x4EFB;&#x610F;&#x76EE;&#x5F55;,&#x907F;&#x514D;&#x5728;&#x6709;&#x7A7A;&#x683C;&#x7684;&#x8DEF;&#x5F84;&#x5B89;&#x88C5; JMeter&#x3002;</li>
+<li>&#x73AF;&#x5883;&#x4F9D;&#x8D56;:java&#x73AF;&#x5883;,&#x9700;&#x8981;&#x81EA;&#x884C;&#x5B89;&#x88DD;&#x914D;&#x7F6E;&#x597D;JK&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x53C3;&#x8003;&#x5E16;&#x5B50;&#x3002;</li>
+</ul>
+<h2 id="&#x542F;&#x52A8;&#x8F6F;&#x4EF6;"><a name="&#x542F;&#x52A8;&#x8F6F;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;&#x8F6F;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x542F;&#x52A8;&#x8F6F;&#x4EF6;</h2>
+<p>&#x8FDB;&#x5165;&#x5230; Imeter&#x7684;bin&#x76EE;&#x5F55;,&#x53CC;&#x51FB;&#x8FD0;&#x884C; Apache ]Meter,jar&#x5373;&#x53EF;&#x542F;&#x52A8;&#x8F6F;&#x4EF6;,&#x5982;&#x4E0B;&#x754C;&#x9762;
+<img src="index_files/26d3956e-72cb-4d57-9b8c-e79aba1456b6.png" alt=""></p>
+<hr>
+<h2 id="jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x6218;"><a name="jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x6218;" class="anchor-navigation-ex-anchor" href="#jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x6218;"><i class="fa fa-link" aria-hidden="true"></i></a>Jmeter&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5B9E;&#x6218;</h2>
+<p>Jmeter&#x811A;&#x672C;&#x7F16;&#x5199;&#x4E00;&#x822C;&#x5206;&#x4E94;&#x4E2A;&#x6B65;&#x9AA4;:</p>
+<ol>
+<li>&#x6DFB;&#x52A0;&#x7EBF;&#x7A0B;&#x7EC4;</li>
+<li>&#x6DFB;&#x52A0;http&#x8BF7;&#x6C42;</li>
+<li>&#x5728;http&#x8BF7;&#x6C42;&#x4E2D;&#x5199;&#x5165;&#x63A5;&#x5165;ur&#x3001;&#x8DEF;&#x5F84;&#x3001;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#x548C;&#x53C2;&#x6570;</li>
+<li>&#x6DFB;&#x52A0;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x6811;</li>
+<li>&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x3001;&#x67E5;&#x770B;&#x8FD4;&#x56DE;&#x503C;</li>
+</ol>
+<h2 id="&#x6D4B;&#x8BD5;api"><a name="&#x6D4B;&#x8BD5;api" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;api"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;API</h2>
+<p><a href="http://httpbin.org/" target="_blank">http://httpbin.org/</a></p>
+<h2 id="&#x53D1;&#x9001;get&#x8BF7;&#x6C42;"><a name="&#x53D1;&#x9001;get&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x53D1;&#x9001;get&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x9001;Get&#x8BF7;&#x6C42;</h2>
+<p>&#x8BF7;&#x6C42;URL&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>http://httpbin.org/get
+</code></pre><p>&#x5728;Jmeter i&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;:
+<img src="index_files/97cd77b2-0ba6-4d04-a524-9578a1a1a47c.png" alt=""></p>
+<p>&#x5728;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x6811;&#x9009;&#x62E9; Json Path Tester&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;:</p>
+<p><img src="index_files/4388bad7-01f2-4c08-8bb3-3a8858734839.png" alt=""></p>
+<h2 id="&#x53D1;&#x9001;post&#x8BF7;&#x6C42;"><a name="&#x53D1;&#x9001;post&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x53D1;&#x9001;post&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x9001;POST&#x8BF7;&#x6C42;</h2>
+<p>&#x8BF7;&#x6C42;URL&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>http://httpbin.org/post
+</code></pre><p>Jemeter&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;
+<img src="index_files/a2ba5522-aa0c-4865-afe3-d5a64e1fdfc3.png" alt=""></p>
+<p>&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#xFF1A;
+<img src="index_files/ecb61d27-79ef-41e3-ab51-7fe4950df434.png" alt=""></p>
+<h2 id="http&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;"><a name="http&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;" class="anchor-navigation-ex-anchor" href="#http&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>HTTP&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;</h2>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x8BF7;&#x6C42;&#x6211;&#x4EEC;&#x53D1;&#x73B0;,Web&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x7684;<strong>&#x534F;&#x8BAE;</strong>&#x548C;<strong>&#x670D;&#x52A1;&#x5668;&#x540D;&#x79F0;&#x6216;IP</strong>&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x90FD;&#x662F;&#x4E00;&#x6837;,&#x6BCF;&#x6B21;&#x91CD;&#x590D;&#x8F93;&#x5165;&#x5176;&#x5B9E;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;,&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;HTTP&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;&#x6765;&#x7BA1;&#x7406;&#x8FD9;&#x4E9B;&#x516C;&#x5171;&#x7684;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x3002;
+&#x6DFB;&#x52A0;&#x6B65;&#x9AA4;:&#x7EBF;&#x7A0B;&#x7EC4;&#x2014;&#x2014;&#x6DFB;&#x52A0;&#x2014;&#x2014;&#x914D;&#x7F6E;&#x5143;&#x4EF6;&#x2014;HTTP&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x914D;&#x7F6E;,&#x5E76;&#x628A;&#x8BE5;&#x5143;&#x4EF6;&#x653E;&#x7F6E;&#x5230;&#x8BF7;&#x6C42;&#x524D;&#x9762;&#x3002;</p>
+<p><img src="index_files/80cfa19e-c357-4ac0-a5ba-6c1c7d461b1c.png" alt=""></p>
+<p>&#x7ECF;&#x8FC7;&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;&#x7684;&#x914D;&#x7F6E;&#x540E;,&#x540E;&#x7EED;&#x6211;&#x4EEC;&#x5897;&#x52A0;&#x65B0;&#x7684;&#x8BF7;&#x6C42;,&#x5982;&#x679C;&#x8FD9;&#x4E24;&#x9879;&#x503C;&#x662F;&#x4E00;&#x6837;&#x7684;&#x8BDD;,&#x90A3;&#x4E48;&#x5219;&#x65E0;&#x9700;&#x518D;&#x91CD;&#x590D;&#x586B;&#x5165;&#x8BE5;&#x503C;&#x3002;</p>
+<h2 id="&#x65AD;&#x8A00;&#x8BBE;&#x7F6E;"><a name="&#x65AD;&#x8A00;&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x65AD;&#x8A00;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65AD;&#x8A00;&#x8BBE;&#x7F6E;</h2>
+<p>Jmeter&#x53EF;&#x4EE5;&#x9488;&#x5BF9;&#x6BCE;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x8FDB;&#x884C;&#x65AD;&#x8A00;.&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#x9009;&#x4E2D;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;,&#x5982;http-get&#x7136;&#x540E;&#x53F3;&#x952E;&#x9009;&#x62E9;:&#x6DFB;&#x52A0;&#x2014;&#x65AD;&#x8A00;&#x4E00;&#x54CD;&#x5E94;&#x65AD;&#x8A00;&#x3002;</p>
+<p>&#x5404;&#x4E2A;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x542B;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x5305;&#x62EC;:&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#x9700;&#x8981;&#x5339;&#x914D;&#x7684;&#x5185;&#x5BB9;&#x5373;&#x4EE3;&#x8868;&#x54CD;&#x5E94;&#x6210;&#x529F;,&#x652F;&#x6301;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</li>
+<li>&#x5339;&#x914D;:&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#x8981;&#x5B8C;&#x5168;&#x5339;&#x914D;&#x9700;&#x8981;&#x5339;&#x914D;&#x7684;&#x5185;&#x5BB9;&#x5373;&#x4EE3;&#x8868;&#x54CD;&#x5E94;&#x6210;&#x529F;,&#x5927;&#x5C0F;&#x5199;&#x4E0D;&#x654F;&#x611F;,&#x652F;&#x6301;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;.</li>
+<li>Equals:&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#x8981;&#x5B8C;&#x5168;&#x7B49;&#x4E8E;&#x9700;&#x8981;&#x5339;&#x914D;&#x7684;&#x5185;&#x5BB9;&#x624D;&#x4EE3;&#x8868;&#x6210;&#x529F;,&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;,&#x9700;&#x8981;&#x5339;&#x914D;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x6B63;&#x5219;&#x8868;</li>
+<li>Substring:&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x7ED3;&#x679C;&#x7684;&#x5B57;&#x4E32;,&#x4F46;&#x662F; subString&#x4E0D;&#x652F;&#x6301;&#x6B63;&#x5219;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>&#x5426;:&#x4E0D;&#x8FDB;&#x884C;&#x5339;&#x914D;</li>
+</ul>
+<p>&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x5339;&#x914D;&#x8FD4;&#x56DE;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;<a href="http://httpbin.org/get" target="_blank">http://httpbin.org/get</a></p>
+<p><img src="index_files/4f582db8-7c6b-41b5-ba3c-1564e64505b9.png" alt=""></p>
+<p>&#x5982;&#x679C;&#x65AD;&#x8A00;&#x6210;&#x529F;,&#x5219;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x6811;&#x4E3A;&#x7EFF;&#x8272;&#x6807;&#x5FD7;,&#x5982;&#x679C;&#x65AD;&#x8A00;&#x5931;&#x8D25;&#x5219;&#x4E3A;&#x7EA2;&#x8272;&#x663E;&#x793A;,&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="index_files/4a1128d6-bef3-4e8a-9968-04de85c63474.png" alt=""></p>
+<h2 id="&#x53C2;&#x6570;&#x8BBE;&#x7F6E;"><a name="&#x53C2;&#x6570;&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#x8BBE;&#x7F6E;</h2>
+<p>Jmeter&#x652F;&#x6301;&#x901A;&#x8FC7; Query String Parameters&#x6216;&#x8005; Request body&#x8BF7;&#x6C42;&#x4F53;&#x6765;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x3002;</p>
+<h3 id="query-string-parameters"><a name="query-string-parameters" class="anchor-navigation-ex-anchor" href="#query-string-parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Query String Parameters</h3>
+<p>&#x5982;&#x679C;&#x5E0C;&#x671B;&#x5728;&#x8BF7;&#x6C42;URL&#x4E2D;&#x6DFB;&#x52A0;&#x53C2;&#x6570;,&#x5219;&#x53EF;&#x4EE5;&#x5728;Http&#x8BF7;&#x6C42;&#x754C;&#x9762;&#x7684; Parameters&#x9009;&#x9879;&#x91CC;&#x9762;&#x6DFB;&#x52A0;&#x53C2;&#x6570;&#x3002;&#x8BE5;&#x53C2;&#x6570;&#x4F1A;&#x901A;&#x8FC7; Query String Parameters&#x65B9;&#x5F0F;&#x4F20;&#x9012;&#x7ED9;&#x670D;&#x52A1;&#x5668;,&#x4E5F;&#x5C31;&#x662F;&#x5728;URL&#x4E2D;&#x4F20;&#x9012;&#x53C2;&#x6570;.&#x5982;&#x4E0B;&#x56FE;&#x5982;&#x6240;&#x793A;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#xFF1A;</p>
+<p><img src="index_files/c8304147-e5d9-4e8b-b3c5-3fe6756b18d9.png" alt=""></p>
+<h3 id="request-body"><a name="request-body" class="anchor-navigation-ex-anchor" href="#request-body"><i class="fa fa-link" aria-hidden="true"></i></a>Request body</h3>
+<p>&#x5728;Post&#x8BF7;&#x6C42;&#x4E2D;&#x53C2;&#x6570;&#x4E00;&#x822C;&#x5728;body&#x4E2D;&#x4F20;&#x9012;, Jmeter&#x4E5F;&#x652F;&#x6301;&#x5728;body&#x4E2D;&#x4F20;&#x9012;&#x53C2;&#x6570;.&#x5982;&#x4F20;&#x9012;Json&#x683C;&#x5F0F;&#x7684;&#x53C2;&#x6570;,&#x5728;Body pata&#x7F16;&#x8F91;&#x6846;&#x8F93;&#x5165;&#x5982;&#x4E0B;&#x53C2;&#x6570;&#xFF1A;</p>
+<blockquote>
+<p>[username&quot;: 51ZxW&quot;}</p>
+</blockquote>
+<p>&#x53E6;&#x5916;&#x8FD8;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x7684;&#x683C;&#x5F0F;,&#x56E0;&#x6B64;&#x9700;&#x8981;&#x6DFB;&#x52A0;<strong>HTTP&#x4FE1;&#x606F;&#x5934;&#x7BA1;&#x7406;&#x5668;</strong></p>
+<p>&#x6DFB;&#x52A0;&#x6B65;&#x9AA4;&#xFF1A;&#x9009;&#x5B9A;&#x8BF7;&#x6C42;&#x2014;&#x2014;&#x6DFB;&#x52A0;&#x2014;&#x2014;&#x914D;&#x7F6E;&#x5143;&#x4EF6;&#x2014;&#x2014;HTTP&#x4FE1;&#x606F;&#x5934;&#x7BA1;&#x7406;&#x5668;,&#x7136;&#x540E;&#x5728;&#x7BA1;&#x7406;&#x5668;&#x91CC;&#x9762;&#x6DFB;&#x52A0;&#x53C2;&#x6570;&#x7C7B;&#x578B;
+Content-Type: application/json&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="index_files/d616945e-9b48-4822-8705-6aec876eb90a.png" alt=""></p>
+<h2 id="&#x53D8;&#x91CF;"><a name="&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D8;&#x91CF;</h2>
+<p>&#x5728;&#x8BF7;&#x6C42;&#x8FC7;&#x7A0B;&#x4E2D;,&#x6709;&#x65F6;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;&#x8BF7;&#x6C42;&#x4E2D;&#x8BBE;&#x7F6E;&#x4E00;&#x4E9B;&#x53D8;&#x91CF;&#x6765;&#x6D4B;&#x8BD5;&#x4E0D;&#x540C;&#x7684;&#x573A;&#x666F;&#x3002;</p>
+<p>Jmeter&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#xFF1A;</p>
+<ul>
+<li>&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</li>
+<li>&#x51FD;&#x6570;&#x751F;&#x6210;&#x53D8;&#x91CF;</li>
+<li>Bean Shell!&#x53D8;&#x91CF;</li>
+<li>&#x6570;&#x636E;&#x6587;&#x4EF6;&#x53D8;&#x91CF;</li>
+</ul>
+<h3 id="&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><a name="&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</h3>
+<p>&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;&#x9009;&#x4E2D;&#x8BF7;&#x6C42;&#x2014;&#x2014;&#x6DFB;&#x52A0;&#x2014;&#x2014;&#x524D;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x2014;&#x2014;&#x7528;&#x6237;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#x4E3A;&#x3C5;ser,&#x503C;&#x4E3A;51zxw</p>
+<p><img src="index_files/898e1b9a-d8bf-43ef-9231-38de0bee6902.png" alt=""></p>
+<p>&#x5728;&#x8BF7;&#x6C42;&#x65F6;&#x5F15;&#x7528;&#x53D8;&#x91CF;&#x5982;&#x4E0B;&#x6240;&#x793A;:&#x53D8;&#x91CF;&#x5F15;&#x7528;&#x683C;&#x5F0F;&#x4E3A;:${user}</p>
+<p><img src="index_files/90d2bca0-fdce-4be1-a63b-8bce5b4e3c55.png" alt=""></p>
+<h3 id="&#x51FD;&#x6570;&#x751F;&#x6210;&#x53D8;&#x91CF;"><a name="&#x51FD;&#x6570;&#x751F;&#x6210;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x51FD;&#x6570;&#x751F;&#x6210;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51FD;&#x6570;&#x751F;&#x6210;&#x53D8;&#x91CF;</h3>
+<p>Jmeter&#x6709;&#x8BB8;&#x591A;&#x5185;&#x7F6E;&#x7684;&#x51FD;&#x6570;,&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x968F;&#x673A;&#x6570;.&#x521B;&#x5EFA;&#x6B65;&#x9AA4;&#x70B9;&#x51FB;&#x83DC;&#x5355;&#x680F;&#x9009;&#x9879;&#x2014;&#x51FD;&#x6570;&#x52A9;&#x624B;&#x5BF9;&#x8BDD;&#x6846;&#x2014;&#x2014;&#x4E0B;&#x62C9;&#x9009;&#x62E9;_Random()&#x51FD;&#x6570;</p>
+<p>&#x51FD;&#x6570;&#x914D;&#x7F6E;&#x5982;&#x4E0B;:</p>
+<p><img src="index_files/db88458a-c473-4c91-86de-7b5aa640d3df.png" alt=""></p>
+<h3 id="bean-shel&#x53D8;&#x91CF;"><a name="bean-shel&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#bean-shel&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>Bean Shel&#x53D8;&#x91CF;</h3>
+<h4 id="&#x4EC0;&#x4E48;&#x662F;-bean-shell"><a name="&#x4EC0;&#x4E48;&#x662F;-bean-shell" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;-bean-shell"><i class="fa fa-link" aria-hidden="true"></i></a><strong>&#x4EC0;&#x4E48;&#x662F; Bean Shell!?</strong></h4>
+<ul>
+<li>Bean She&#x662F;&#x4E00;&#x79CD;&#x5B8C;&#x5168;&#x7B26;&#x5408;Java&#x8BED;&#x6CD5;&#x89C4;&#x8303;&#x7684;&#x811A;&#x672C;&#x8BED;&#x8A00;,&#x5E76;&#x4E14;&#x53C8;&#x62E5;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x4E9B;&#x8BED;&#x6CD5;&#x548C;&#x65B9;&#x6CD5;; </li>
+<li>Bean She&#x662F;&#x4E00;&#x79CD;&#x677E;&#x6563;&#x7C7B;&#x578B;&#x7684;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x8FD9;&#x70B9;&#x548C;JS&#x7C7B;&#x4F3C;);</li>
+<li>Bean She&#x662F;&#x7528;Ja&#x3BD;a&#x5199;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x5C0F;&#x578B;&#x7684;&#x3001;&#x5154;&#x8D39;&#x7684;&#x3001;&#x5D4C;&#x5165;&#x5F0F;&#x7684;Java&#x6E90;&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#x5668;,&#x5177;&#x6709;&#x5BF9;&#x8C61;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x7279;&#x6027;&#x975E;&#x5E38;&#x7CBE;&#x7B80;&#x3002;</li>
+<li>Bean Shell&#x6267;&#x884C;&#x6807;&#x51C6;Java&#x8BED;&#x53E5;&#x548C;&#x8868;&#x8FBE;&#x5F0F;&#x53E6;&#x5916;&#x5305;&#x62EC;&#x4E00;&#x4E9B;&#x811A;&#x672C;&#x547D;&#x4EE4;&#x548C;&#x8BED;&#x6CD5;&#x3002;</li>
+</ul>
+<p>&#x5B98;&#x7F51;<a href="http://www.beanshell.org" target="_blank">http://www.beanshell.org</a></p>
+<h4 id="jmeter&#x6709;&#x54EA;&#x4E9B;-bean-shel"><a name="jmeter&#x6709;&#x54EA;&#x4E9B;-bean-shel" class="anchor-navigation-ex-anchor" href="#jmeter&#x6709;&#x54EA;&#x4E9B;-bean-shel"><i class="fa fa-link" aria-hidden="true"></i></a>Jmeter&#x6709;&#x54EA;&#x4E9B; Bean Shel</h4>
+<ul>
+<li>&#x5B9A;&#x65F6;&#x5668;Bean Shell Timer</li>
+<li>&#x524D;&#x7F6E;&#x5904;&#x7406;&#x5668;: Bean Shell PreProcessor</li>
+<li>&#x91C7;&#x6837;&#x5668;: Bean Shell Sampler</li>
+<li>&#x540E;&#x7F6E;&#x5904;&#x7406;&#x5668;: Bean Shell PostProcessor</li>
+<li>&#x65AD;&#x8A00;:Bean Shel</li>
+<li>&#x65AD;&#x8A00;&#x76D1;&#x542C;&#x5668;: Bean shell listener</li>
+</ul>
+<h3 id="bean-shell-&#x5E38;&#x7528;&#x5185;&#x7F6E;&#x53D8;&#x91CF;"><a name="bean-shell-&#x5E38;&#x7528;&#x5185;&#x7F6E;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#bean-shell-&#x5E38;&#x7528;&#x5185;&#x7F6E;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>Bean Shell &#x5E38;&#x7528;&#x5185;&#x7F6E;&#x53D8;&#x91CF;</h3>
+<p>JMeter &#x5728;&#x5B83;&#x7684; BeanShell &#x4E2D;&#x5185;&#x7F6E;&#x4E86;&#x53D8;&#x91CF;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x4E9B;&#x53D8;&#x91CF;&#x4E0E; JMeter &#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x5176;&#x4E2D;&#x4E3B;&#x8981;&#x7684;&#x53D8;&#x91CF;&#x53CA;&#x5176;&#x4F7F;&#x7528;
+&#x65B9;&#x6CD5;&#x5982;&#x4E0B;:
+vars - (JMeterVariables)&#xFF1A;&#x64CD;&#x4F5C;jmeter&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x5B9E;&#x9645;&#x5F15;&#x7528;&#x4E86;JMeter&#x7EBF;&#x7A0B;&#x4E2D;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x5BB9;&#x5668;&#xFF08;&#x672C;&#x8D28;&#x4E0A;&#x662F;Map&#xFF09;&#xFF0C;
+&#x5B83;&#x662F;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x4E0E; BeanShell &#x4EA4;&#x4E92;&#x7684;&#x6865;&#x6881;&#xFF0C;&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>//&#x5B9A;&#x4E49; jmeter &#x53D8;&#x91CF;
+vars.put(String key&#xFF0C;String value);
+//&#x4ECE; jmeter &#x4E2D;&#x83B7;&#x53D6;&#x53D8;&#x91CF;
+vars.get(String key);
+</code></pre><p>log&#xFF1A;&#x5199;&#x5165;&#x4FE1;&#x606F;&#x5230; jmeber.log &#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>log.info(&#x201C;hello 51zxw!&#x201D;);
+</code></pre><h4 id="beanshell-&#x5B9E;&#x8DF5;&#x6848;&#x4F8B;"><a name="beanshell-&#x5B9E;&#x8DF5;&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#beanshell-&#x5B9E;&#x8DF5;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>BeanShell &#x5B9E;&#x8DF5;&#x6848;&#x4F8B;</h4>
+<p>1.&#x521B;&#x5EFA;&#x8BF7;&#x6C42;&#x540D;&#x4E3A; beanshell_test &#x7684; Http &#x8BF7;&#x6C42;&#xFF0C;&#x8BF7;&#x6C42;&#x5730;&#x5740;&#x4E3A;&#xFF1A;<a href="http://httpbin.org/get" target="_blank">http://httpbin.org/get</a> &#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#x4E3A;
+beanshell_user</p>
+<p><img src="index_files/e9b8b5ef-52ad-483c-8c1a-0fb94c6ecf95.jpg" alt=""></p>
+<p>2.&#x521B;&#x5EFA; BeanShell PreProcessor &#x53D8;&#x91CF;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="index_files/f8c85efa-edc9-49ae-a5ed-b0ebe34e3848.png" alt=""></p>
+<p>3.&#x6700;&#x540E;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x8BBE;&#x7F6E;&#x7684;&#x53D8;&#x91CF;&#x5DF2;&#x7ECF;&#x751F;&#x6548;</p>
+<p><img src="index_files/43ad2542-affb-4e78-a405-7c3d46b0f135.png" alt=""></p>
+<h3 id="csv-&#x6570;&#x636E;&#x6587;&#x4EF6;&#x53D8;&#x91CF;"><a name="csv-&#x6570;&#x636E;&#x6587;&#x4EF6;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#csv-&#x6570;&#x636E;&#x6587;&#x4EF6;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>CSV &#x6570;&#x636E;&#x6587;&#x4EF6;&#x53D8;&#x91CF;</h3>
+<p>CSV &#x6570;&#x636E;&#x6587;&#x4EF6;&#x53D8;&#x91CF;&#x662F;&#x6307;&#x4ECE;&#x5916;&#x90E8; csv &#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x51FA;&#x6765;&#x4F5C;&#x4E3A;&#x53D8;&#x91CF;&#x3002;
+&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;: &#x9009;&#x62E9;&#x8BF7;&#x6C42;&#x2014;&#x2014;&#x6DFB;&#x52A0;&#x2014;&#x2014;&#x914D;&#x7F6E;&#x5143;&#x4EF6;&#x2014;&#x2014;CSV &#x6570;&#x636E;&#x6587;&#x4EF6;&#x8BBE;&#x7F6E;
+&#x521B;&#x5EFA; csv &#x6587;&#x4EF6;&#xFF08;&#x6700;&#x597D;&#x4E0D;&#x7528;&#x7528;&#x8BB0;&#x4E8B;&#x672C;&#x521B;&#x5EFA;&#xFF0C;&#x63A8;&#x8350;&#x7528; Nodepad++&#xFF09;&#x6587;&#x4EF6;&#x7F16;&#x7801;&#x4E3A; UTF-8 &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;
+user_data.csv</p>
+<pre class="language-"><code>51zxw,8888
+</code></pre><p>CSV &#x6570;&#x636E;&#x6587;&#x4EF6;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;
+<img src="index_files/ead292ee-28d6-455f-a19a-847c443f45f8.png" alt=""></p>
+<p>&#x5728; Post &#x8BF7;&#x6C42;&#x4E2D;&#x5F15;&#x7528;&#x53D8;&#x91CF;&#x6570;&#x636E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/367307ef-e3fb-49d5-9244-294f145a184a.png" alt=""></p>
+<p>&#x8FD0;&#x884C;&#x4E4B;&#x540E;&#x5728;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x6811;&#x4E2D;&#x8BF7;&#x6C42;&#x9009;&#x9879;&#x680F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x83B7;&#x53D6;&#x7684;&#x53D8;&#x91CF;&#x6570;&#x636E;&#x3002;</p>
+<pre class="language-"><code>POST http://httpbin.org/post
+POST data:
+user=51zxw&amp;password=8888
+[no cookies]
+Request Headers:
+Connection: keep-alive
+Content-Type : application/json
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 24
+Host: httpbin.org
+User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_05)
+</code></pre><h3 id="csv-&#x53C2;&#x6570;&#x5316;"><a name="csv-&#x53C2;&#x6570;&#x5316;" class="anchor-navigation-ex-anchor" href="#csv-&#x53C2;&#x6570;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>CSV &#x53C2;&#x6570;&#x5316;</h3>
+<p>&#x9488;&#x5BF9;&#x4E4B;&#x524D;&#x7684; POST &#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x53C2;&#x6570;&#x904D;&#x5386;&#x6D4B;&#x8BD5;&#xFF1A;
+&#x63A5;&#x53E3;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>http://httpbin.org/post
+</code></pre><p>&#x53D1;&#x9001;&#x53C2;&#x6570;&#xFF1A;user_data.csv</p>
+<pre class="language-"><code>51zxw,8888
+51zxw1,6666
+51zxw2,4444
+51zxw3,5555
+</code></pre><p>&#x5728;&#x4E4B;&#x524D;&#x7684; csv &#x6570;&#x636E;&#x6587;&#x4EF6;&#x8BBE;&#x7F6E;&#x9700;&#x8981;&#x9700;&#x6539;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;&#x8868;&#x793A;&#x628A;&#x6240;&#x6709;&#x6570;&#x636E;&#x8BFB;&#x53D6;&#x4E00;&#x904D;&#xFF0C;&#x4E14;&#x4E0D;&#x91CD;&#x590D;&#x3002;</p>
+<p><img src="index_files/a47d98c7-b19a-438b-ac19-0c124b0512b6.png" alt=""></p>
+<p>&#x63A5;&#x53E3;&#x8BF7;&#x6C42;&#x540D;&#x79F0;&#x683C;&#x5F0F;&#x66F4;&#x6539;&#x4E3A;&#xFF1A;http-post-${user} &#x65B9;&#x4FBF;&#x6211;&#x4EEC;&#x540E;&#x7EED;&#x67E5;&#x770B;&#x6570;&#x636E;&#x904D;&#x5386;&#x60C5;&#x51B5;&#x3002;</p>
+<p><img src="index_files/4592a2f6-b30c-49f9-a5a3-238bed3e3427.jpg" alt=""></p>
+<p>&#x6700;&#x540E;&#x4FEE;&#x6539;&#x7EBF;&#x7A0B;&#x7EC4;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#x91CF;&#xFF0C;&#x56E0;&#x4E3A;&#x6570;&#x636E;&#x4E2D;&#x6709; 4 &#x7EC4;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A; 4.</p>
+<p><img src="index_files/41953220-cf46-41a5-8253-e70dbb615f75.jpg" alt=""></p>
+<p>&#x8FD0;&#x884C;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:</p>
+<p><img src="index_files/7bf7c7e5-2dba-46ca-9669-a5dd3b7cee46.jpg" alt=""></p>
+<hr>
+<h2 id="&#x6B63;&#x5219;&#x5339;&#x914D;"><a name="&#x6B63;&#x5219;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x6B63;&#x5219;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B63;&#x5219;&#x5339;&#x914D;</h2>
+<h3 id="&#x95EE;&#x9898;&#x601D;&#x8003;"><a name="&#x95EE;&#x9898;&#x601D;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x95EE;&#x9898;&#x601D;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x95EE;&#x9898;&#x601D;&#x8003;</h3>
+<p>&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;&#x4E2D;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x63A5;&#x53E3;&#x4E4B;&#x95F4;&#x5173;&#x8054;&#x8C03;&#x7528;&#xFF0C;&#x6BD4;&#x5982;&#x83B7;&#x53D6;&#x4E0A;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x4F5C;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;
+&#x5982;&#x4F55;&#x4ECE;&#x5904;&#x7406;&#x5462;&#xFF1F;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x4F7F;&#x7528; Jmeter &#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x63D0;&#x53D6;&#x5668;&#xFF0C;&#x901A;&#x8FC7;&#x5BF9;&#x54CD;&#x5E94;&#x7684;&#x6570;&#x636E;&#x6765;&#x63D0;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="&#x64CD;&#x4F5C;&#x6848;&#x4F8B;"><a name="&#x64CD;&#x4F5C;&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x6848;&#x4F8B;</h3>
+<p>&#x4ECE;&#x8BF7;&#x6C42; http-get &#x54CD;&#x5E94;&#x6570;&#x636E;&#x4E2D;&#x5339;&#x914D;&#x968F;&#x673A;&#x6570; num &#x7684;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x8BF7;&#x6C42; get-num &#x6765;&#x5F15;&#x7528; num &#x7684;&#x4F5C;&#x4E3A;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x3002;</p>
+<h3 id="&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;"><a name="&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;</h3>
+<p>&#x9009;&#x4E2D;&#x8BF7;&#x6C42;&#x2014;&#x2014;&#x6DFB;&#x52A0;&#x2014;&#x2014;&#x540E;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x2014;&#x2014;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x63D0;&#x53D6;&#x5668;</p>
+<p>&#x6839;&#x636E; http-get &#x7684;&#x54CD;&#x5E94;&#xFF0C;&#x63D0;&#x53D6;&#x8FD4;&#x56DE;&#x503C;&#x4E2D;&#x7684; num &#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/c49ce836-968d-4271-8aa1-945797823639.jpg" alt=""></p>
+<h3 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x914D;&#x7F6E;&#x8868;"><a name="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x914D;&#x7F6E;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x914D;&#x7F6E;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x914D;&#x7F6E;&#x8868;</h3>
+<ul>
+<li>&#x5F15;&#x7528;&#x540D;&#x79F0;&#xFF1A;&#x8BF7;&#x6C42;&#x8981;&#x5F15;&#x7528;&#x7684;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#xFF0C;&#x5982;&#x586B;&#x5199; result_num&#xFF0C;&#x5219;&#x53EF;&#x7528;${result_num}&#x5F15;&#x7528;&#x5B83;&#x3002;</li>
+<li>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;&#x5339;&#x914D;&#x9700;&#x8981;&#x7684;&#x5185;&#x5BB9;&#x3002;</li>
+<li>&#x6A21;&#x677F;&#xFF1A;&#x7528;$num$&#x5F15;&#x7528;&#x8D77;&#x6765;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x6709;&#x591A;&#x4E2A;&#x5339;&#x914D;&#x6570;&#x636E;&#xFF0C;num &#x8868;&#x793A;&#x5339;&#x914D;&#x5230;&#x7684;&#x7B2C;&#x51E0;&#x4E2A;&#x503C;&#x7ED9;&#x53D8;&#x91CF;&#x3002;&#x5982;&#xFF1A;
+$1$&#x8868;&#x793A;&#x5339;&#x914D;&#x5230;&#x7684;&#x7B2C; 1 &#x4E2A;&#x503C;&#x5B58;&#x50A8;&#x5728;&#x53D8;&#x91CF;&#x4E2D;&#x3002;</li>
+<li>&#x5339;&#x914D;&#x6570;&#x5B57;&#xFF1A;0 &#x4EE3;&#x8868;&#x968F;&#x673A;&#x53D6;&#x503C;&#xFF0C;1 &#x4EE3;&#x8868;&#x5168;&#x90E8;&#x53D6;&#x503C;&#xFF0C;</li>
+<li>&#x7F3A;&#x7701;&#x503C;&#xFF1A;&#x5982;&#x679C;&#x53C2;&#x6570;&#x6CA1;&#x6709;&#x53D6;&#x5F97;&#x5230;&#x503C;&#xFF0C;&#x90A3;&#x9ED8;&#x8BA4;&#x7ED9;&#x4E00;&#x4E2A;&#x503C;&#x8BA9;&#x5B83;&#x53D6;&#x3002;&#x6848;&#x4F8B;&#x4E2D;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8BF4;&#x660E;</li>
+<li>()&#x62EC;&#x8D77;&#x6765;&#x7684;&#x90E8;&#x5206;&#x5C31;&#x662F;&#x8981;&#x63D0;&#x53D6;&#x7684;&#x3002;</li>
+<li>.&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>+&#x4E00;&#x6B21;&#x6216;&#x591A;&#x6B21;&#x3002;</li>
+<li>?&#x5728;&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x9879;&#x540E;&#x505C;&#x6B62;&#x3002;</li>
+</ul>
+<p>&#x76F8;&#x5173;&#x8D44;&#x6599;&#xFF1A;<a href="https://www.runoob.com/regexp/regexp-tutorial.html" target="_blank">&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6559;&#x7A0B;</a></p>
+<p>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42; get-num&#xFF0C;&#x5728;&#x65B0;&#x7684;&#x8BF7;&#x6C42;&#x4E2D;&#x5C06; http-get &#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="index_files/28603110-f977-4933-904f-502397931a9a.png" alt=""></p>
+<hr>
+<h2 id="&#x7528;&#x4F8B;&#x6570;&#x636E;&#x5206;&#x79BB;"><a name="&#x7528;&#x4F8B;&#x6570;&#x636E;&#x5206;&#x79BB;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x4F8B;&#x6570;&#x636E;&#x5206;&#x79BB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x4F8B;&#x6570;&#x636E;&#x5206;&#x79BB;</h2>
+<p>&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x7684;&#x7528;&#x4F8B;&#x6570;&#x636E;&#x90FD;&#x662F;&#x914D;&#x7F6E;&#x5728; Jmeter Http &#x8BF7;&#x6C42;&#x4E2D;&#xFF0C;&#x6BCF;&#x6B21;&#x9700;&#x8981;&#x589E;&#x52A0;&#xFF0C;&#x4FEE;&#x6539;&#x7528;&#x4F8B;&#x90FD;&#x9700;&#x8981;&#x6253;&#x5F00; jmeter &#x91CD;&#x65B0;&#x7F16;&#x8F91;&#xFF0C;&#x5F53;
+&#x7528;&#x4F8B;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7528;&#x4F8B;&#x7EF4;&#x62A4;&#x8D77;&#x6765;&#x5C31;&#x8D8A;&#x6765;&#x8D8A;&#x9EBB;&#x70E6;&#xFF0C;&#x6709;&#x6CA1;&#x6709;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5462;&#xFF1F;</p>
+<p>&#x5176;&#x5B9E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x7528;&#x4F8B;&#x7684;&#x6570;&#x636E;&#x5B58;&#x653E;&#x5728; csv &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7; csv &#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x6765;&#x8BFB;&#x53D6;&#x7528;&#x4F8B;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x7528;&#x4F8B;&#x6570;&#x636E;</p>
+<p>&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<h3 id="&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;"><a name="&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x4F8B;&#x8BBE;&#x8BA1;</h3>
+<p>&#x8FD9;&#x91CC;&#x4EE5; httpbin &#x63A5;&#x53E3;&#x4E3A;&#x4F8B;&#xFF0C;&#x521B;&#x5EFA;&#x7528;&#x4F8B;&#x6587;&#x4EF6;&#xFF1A;jmeter-testcase.csv</p>
+<p><img src="index_files/fb57edc0-c154-40a3-b5b5-5378b0eaed6d.jpg" alt=""></p>
+<p>&#x7528;&#x4F8B;&#x540D;&#x79F0;&#x53D8;&#x91CF;&#x542B;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>${caseSeq}:&#x7528;&#x4F8B;&#x7F16;&#x53F7;</li>
+<li>${apiType}:api &#x7C7B;&#x578B;</li>
+<li>${apiSeq} &#xFF1A;api &#x7248;&#x672C;&#x53F7;</li>
+<li>${apiName}&#xFF1A;api &#x540D;&#x79F0;</li>
+<li>${priority}:&#x4F18;&#x5148;&#x7EA7;</li>
+<li>${url}:api &#x8DEF;&#x5F84;</li>
+<li>${methods}:&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;</li>
+<li>${parameter}: &#x8BF7;&#x6C42;&#x53C2;&#x6570;</li>
+<li>${expectValue}:&#x671F;&#x671B;&#x503C;&#xFF0C;&#x7528;&#x4E8E;&#x65AD;&#x8A00;</li>
+</ul>
+<h3 id="jmeter-&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;"><a name="jmeter-&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#jmeter-&#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>Jmeter &#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;</h3>
+<p>1.&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7EC4;&#xFF0C;&#x547D;&#x540D;&#x4E3A;&#xFF1A;&#x6570;&#x636E;&#x9A71;&#x52A8;
+2.&#x521B;&#x5EFA;&#x4E00;&#x4E2A; http &#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/293b37f3-0306-431e-9c88-5ca8b3231cdd.jpg" alt=""></p>
+<p>3.&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x5668; &#x6B65;&#x9AA4;&#x4E3A;&#xFF1A;&#x7EBF;&#x7A0B;&#x7EC4;&#x2014;&#x2014;&#x6DFB;&#x52A0;&#x2014;&#x2014;&#x903B;&#x8F91;&#x63A7;&#x5236;&#x5668;&#x2014;&#x2014;&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x5668;&#x3002; &#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x5668;&#x7684;&#x4F5C;&#x7528;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x6574;
+&#x4E2A;&#x7528;&#x4F8B;&#x5FAA;&#x73AF;&#x6267;&#x884C;&#x7684;&#x6B21;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F; 1 &#x6839;&#x636E;&#x7528;&#x4F8B;&#x6570;&#x91CF;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x4E3A; 4</p>
+<p><img src="index_files/09431b5a-3a3a-4f46-a7ee-617a01015457.jpg" alt=""></p>
+<p>4.&#x5728;&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x5668;&#x8282;&#x70B9;&#x4E0B;&#x521B;&#x5EFA; CSV &#x6587;&#x4EF6;&#x8BBE;&#x7F6E;&#xFF0C;&#x5177;&#x4F53;&#x914D;&#x7F6E;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<p><img src="index_files/71f9c75b-b954-423a-99e8-df485d4d8361.jpg" alt=""></p>
+<p>5.&#x521B;&#x5EFA;&#x4E00;&#x4E2A; if &#x63A7;&#x5236;&#x5668;&#xFF0C;&#x6B65;&#x9AA4;&#x4E3A;&#xFF1A;&#x7EBF;&#x7A0B;&#x7EC4;&#x2014;&#x2014;&#x6DFB;&#x52A0;&#x2014;&#x2014;&#x903B;&#x8F91;&#x63A7;&#x5236;&#x5668;&#x2014;&#x2014;if &#x63A7;&#x5236;&#x5668;
+if &#x63A7;&#x5236;&#x5668;&#x7684;&#x4F5C;&#x7528;&#x4E3A;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x6761;&#x4EF6;&#x6267;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x7528;&#x4F8B;&#xFF0C;&#x4F8B;&#x5982;&#x8FD9;&#x91CC;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x63A5;&#x53E3;&#x8BF7;&#x6C42;&#x7C7B;&#x578B;&#xFF0C;&#x5206;&#x522B;&#x521B;&#x5EFA;&#x4E86; GET &#x548C; POST &#x4E24;&#x4E2A;
+&#x63A7;&#x5236;&#x5668;&#x3002;</p>
+<p>GET &#x8BBE;&#x7F6E;&#x7684;&#x6761;&#x4EF6;&#x8BED;&#x53E5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/0a8e8b44-3250-4c73-9ffe-59eff94b9ad3.jpg" alt=""></p>
+<p>&#x6761;&#x4EF6;&#x8BED;&#x53E5;&#x4E3A;&#xFF1A;<code>&quot;${methods}&quot;==&quot;GET&quot;</code>&#x5176;&#x4E2D; ${methods}&#x8868;&#x793A;&#x5F15;&#x7528; csv &#x4E2D;&#x7684; methods &#x4E2D;&#x7684;&#x503C;&#x3002;
+&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li><p>Interpret Condition as Variable Expression?&#xFF1A;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x88AB;&#x9009;&#x4E2D;&#xFF0C;&#x5C06;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528; js &#x89E3;&#x6790;;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x7684;
+&#x503C;&#x5FC5;&#x987B;&#x662F; true(&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;)&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53D6;&#x6D88;&#x52FE;&#x9009;&#x72B6;&#x6001;&#x3002;</p>
+</li>
+<li><p>Evaluate for all children&#xFF1A;&#x5982;&#x679C;&#x9009;&#x4E2D;&#x8FD9;&#x4E00;&#x9879;&#xFF0C;&#x5728;&#x6BCF;&#x4E2A;&#x5B50;&#x7ED3;&#x70B9;&#x6267;&#x884C;&#x524D;&#x90FD;&#x4F1A;&#x8BA1;&#x7B97;&#x8868;&#x8FBE;&#x5F0F;</p>
+</li>
+</ul>
+<p>POST &#x6761;&#x4EF6;&#x8BED;&#x53E5;&#x8BBE;&#x7F6E;&#x4E3A;&#xFF1A;<code>&quot;${methods}&quot;==&quot;POST&quot;}</code></p>
+<p><img src="index_files/0be71777-d584-47e1-b113-c350c211263d.jpg" alt=""></p>
+<p>6.&#x521B;&#x5EFA; GET &#x8BF7;&#x6C42;&#x7C7B;&#x578B;&#x7684;&#x7528;&#x4F8B;&#x5982;&#x4E0B;</p>
+<p><img src="index_files/93c6a36c-d728-4600-9909-677e64e2bfee.jpg" alt=""></p>
+<p>&#x7528;&#x4F8B;&#x540D;&#x79F0;&#x683C;&#x5F0F;&#xFF1A;<code>${caseSeq}_ ${apiSeq}_${apiName}</code></p>
+<p>&#x65AD;&#x8A00;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;<code>${expectValue}</code>&#x5F15;&#x7528; csv &#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x3002;</p>
+<p><img src="index_files/b55961e5-7852-4989-a0e5-b229a673781d.png" alt=""></p>
+<p>&#x6700;&#x540E;&#x6DFB;&#x52A0;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x6811;&#xFF0C;&#x7136;&#x540E;&#x8FD0;&#x884C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="index_files/48ebf191-b15c-43e9-b5f9-8f3178b12207.png" alt=""></p>
+<p>7.POST &#x7528;&#x4F8B;&#x8BBE;&#x7F6E;&#x548C; GET &#x7C7B;&#x4F3C;&#xFF0C;&#x4E0D;&#x8FC7;&#x53C2;&#x6570;&#x8BF7;&#x6C42;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x662F;&#x5728; body &#x4E2D;&#x3002;&#x53E6;&#x5916;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#x4E3A;&#xFF1A;POST</p>
+<p><img src="index_files/920aea1d-51d7-4008-8782-68c51762b75f.jpg" alt=""></p>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:</p>
+<p><img src="index_files/4a7f1461-c806-4a55-ab79-ce6b7a6934a0.jpg" alt=""></p>
+<p>8.&#x6700;&#x540E;&#x5728;&#x7EBF;&#x7A0B;&#x7EC4;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x6811;&#xFF0C;&#x6267;&#x884C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5168;&#x90E8;&#x7528;&#x4F8B;&#x6267;&#x884C;&#x60C5;&#x51B5;&#x3002;</p>
+<p><img src="index_files/70688396-8e99-4b0f-9819-fb4eb4dcf56f.jpg" alt=""></p>
+<h3 id="&#x5C0F;&#x7ED3;"><a name="&#x5C0F;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7ED3;</h3>
+<p>&#x901A;&#x8FC7;&#x8FD9;&#x6837;&#x7684;&#x6570;&#x636E;&#x9A71;&#x52A8;&#xFF0C;&#x5F53;&#x9762;&#x5BF9;&#x5927;&#x91CF;&#x7528;&#x4F8B;&#x65F6;&#x5728; jmeter &#x8BBE;&#x7F6E;&#x5C31;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#xFF0C;&#x540E;&#x7EED;&#x7684;&#x7528;&#x4F8B;&#x7EF4;&#x62A4;&#x4E5F;&#x975E;&#x5E38;&#x9AD8;&#x6548;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x7528;&#x5728;
+jmeter &#x4E00;&#x4E2A;&#x4E2A;&#x53BB;&#x5355;&#x72EC;&#x4FEE;&#x6539;&#x7528;&#x4F8B;&#x4E86;&#x3002;</p>
+<hr>
+<h2 id="cookie-&#x8BBE;&#x7F6E;"><a name="cookie-&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#cookie-&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>Cookie &#x8BBE;&#x7F6E;</h2>
+<h3 id="http-cookie-&#x7BA1;&#x7406;&#x5668;"><a name="http-cookie-&#x7BA1;&#x7406;&#x5668;" class="anchor-navigation-ex-anchor" href="#http-cookie-&#x7BA1;&#x7406;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>HTTP Cookie &#x7BA1;&#x7406;&#x5668;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x6709;&#x4E00;&#x4E2A; HTTP &#x8BF7;&#x6C42;&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x91CC;&#x5305;&#x542B;&#x4E00;&#x4E2A; cookie&#xFF0C;&#x90A3;&#x4E48; &#x4F7F;&#x7528; JmeterCookie &#x7BA1;&#x7406;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x8BE5; cookie
+&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#xFF0C;&#x800C;&#x4E14;&#x4EE5;&#x540E;&#x6240;&#x6709;&#x5BF9;&#x8BE5;&#x7F51;&#x7AD9;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x4F7F;&#x7528;&#x540C;&#x4E00;&#x4E2A; cookie&#x3002;&#x6BCF;&#x4E2A; JMeter &#x7EBF;&#x7A0B;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x72EC;&#x7ACB;&#x7684;&quot;cookie &#x4FDD;&#x5B58;
+&#x533A;&#x57DF;&quot;&#x3002;</p>
+<h3 id="&#x6848;&#x4F8B;&#x5B9E;&#x8DF5;"><a name="&#x6848;&#x4F8B;&#x5B9E;&#x8DF5;" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;&#x5B9E;&#x8DF5;</h3>
+<p>&#x8BF7;&#x6C42; URL &#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>http://httpbin.org/cookies/set
+</code></pre><p>&#x4EE5;&#x4E0A;&#x8BF7;&#x6C42;&#x4F1A;&#x8FD4;&#x56DE; cookie&#xFF0C;Cookie &#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E; Cookie &#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/80c8c5b1-c987-4c28-81ce-cac66220f6ed.png" alt=""></p>
+<p>&#x6DFB;&#x52A0; Cookie &#x7BA1;&#x7406;&#x5668;&#xFF1A;&#x9009;&#x4E2D;&#x7EBF;&#x7A0B;&#x7EC4;&#x2014;&#x2014;&#x6DFB;&#x52A0;&#x2014;&#x2014;&#x914D;&#x7F6E;&#x5143;&#x4EF6;&#x2014;&#x2014;HTTP Cookie &#x7BA1;&#x7406;&#x5668;</p>
+<p>&#x8FD0;&#x884C;&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x6811;&#x770B;&#x5230; Cookie&#xFF1A;</p>
+<p><img src="index_files/d6b13ac8-2ade-41ba-9fa0-13d61033d590.jpg" alt=""></p>
+<p>&#x6211;&#x4EEC;&#x7EE7;&#x7EED;&#x53D1;&#x9001;&#x65B0;&#x7684;&#x8BF7;&#x6C42;&#x4E5F;&#x4F1A;&#x81EA;&#x52A8;&#x5305;&#x542B;&#x8BE5; Cookie</p>
+<p>&#x8BF7;&#x6C42; URL &#x4E3A;&#xFF1A;<a href="http://httpbin.org/cookies" target="_blank">http://httpbin.org/cookies</a></p>
+<p><img src="index_files/85dd1f33-b878-46ac-9906-0e8a9849c794.png" alt=""></p>
+<p>&#x8FD0;&#x884C;&#x4E4B;&#x540E;&#x7ED3;&#x679C;&#x5982;&#x4E0B;</p>
+<p><img src="index_files/c082977e-23aa-4990-8a77-02de33876742.jpg" alt=""></p>
+<hr>
+<h2 id="&#x6388;&#x6743;&#x8BBE;&#x7F6E;"><a name="&#x6388;&#x6743;&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x6388;&#x6743;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6388;&#x6743;&#x8BBE;&#x7F6E;</h2>
+<h3 id="&#x5E94;&#x7528;&#x80CC;&#x666F;"><a name="&#x5E94;&#x7528;&#x80CC;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;&#x80CC;&#x666F;</h3>
+<p>&#x5728;&#x4ECB;&#x7ECD; Postman &#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x4E86;&#x4F7F;&#x7528; Postman &#x5BF9;&#x5404;&#x79CD;&#x6388;&#x6743;&#x534F;&#x8BAE;&#x7684;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x5728; Jmeter &#x4E2D;&#x540C;&#x6837;&#x4E5F;&#x652F;&#x6301;
+&#x5BF9;&#x9700;&#x8981;&#x6388;&#x6743;&#x7684;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x5173;&#x4E8E;&#x5404;&#x4E2A;&#x6388;&#x6743;&#x534F;&#x8BAE;&#x7684;&#x5185;&#x5BB9;&#x8BF7;&#x53C2;&#x8003; Posman &#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h3 id="basic-auth"><a name="basic-auth" class="anchor-navigation-ex-anchor" href="#basic-auth"><i class="fa fa-link" aria-hidden="true"></i></a>Basic Auth</h3>
+<p>&#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code>http://httpbin.org/basic-auth/{username}/{passwd}
+</code></pre><p>&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x540D;&#x4E3A;&#xFF1A;51zxw &#x5BC6;&#x7801;&#xFF1A;8888</p>
+<p>&#x65B0;&#x5EFA; http &#x8BF7;&#x6C42;&#x540D;&#x79F0;&#x4E3A;&#xFF1A;basic-auth &#x8BBE;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/e1cc3e6d-81ac-498a-af77-47f63567c2b5.jpg" alt=""></p>
+<p>&#x7136;&#x540E;&#x6DFB;&#x52A0; HTTP &#x6388;&#x6743;&#x7BA1;&#x7406;&#x5668;&#xFF1A;&#x9009;&#x4E2D;&#x8BF7;&#x6C42;&#x2014;&#x2014;&#x6DFB;&#x52A0;&#x2014;&#x2014;&#x914D;&#x7F6E;&#x5143;&#x4EF6;&#x2014;&#x2014;HTTP &#x6388;&#x6743;&#x7BA1;&#x7406;&#x5668; &#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/0f312579-5927-4e4e-9709-a18fdb861daa.jpg" alt=""></p>
+<p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/1f478ddf-77dc-4ce9-b55c-acc5bd36bdab.jpg" alt=""></p>
+<p>&#x8BF7;&#x6C42;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code>GET http://httpbin.org/basic-auth/51zxw/8888
+GET data:
+Cookie Data:
+user=51zxw
+Request Headers:
+Connection: keep-alive
+Host: httpbin.org
+User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_05)
+Authorization: Basic NTF6eHc6ODg4OA==
+</code></pre><p>&#x53EF;&#x4EE5;&#x8BF7;&#x6C42;&#x5185;&#x5BB9;&#x4E2D;&#x5E26;&#x6709;&#x6388;&#x6743;&#x4FE1;&#x606F; <strong>Authorization: Basic NTF6eHc6ODg4OA==</strong> , &#x800C; NTF6eHc6ODg4OA==&#x8FD9;&#x4E2A;&#x6570;&#x503C;&#x5C31;
+&#x662F;&#x7528; &#x7528;&#x6237;&#x540D;&#xFF1A;&#x5BC6;&#x7801;&#x7ECF;&#x8FC7; Base64 &#x7F16;&#x7801;&#x540E;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#x3002;</p>
+<h3 id="digest-auth"><a name="digest-auth" class="anchor-navigation-ex-anchor" href="#digest-auth"><i class="fa fa-link" aria-hidden="true"></i></a>Digest Auth</h3>
+<p>&#x8BF7;&#x6C42; URL &#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code>http://httpbin.org/digest-auth/{qop}/{username}/{password}
+</code></pre><p><strong>{qop}</strong> &#x8FD9;&#x4E2A;&#x53C3;&#x6570;&#x89C4;&#x5B9A; server &#x652F;&#x6301;&#x54EA;&#x79CD;&#x4FDD;&#x62A4;&#x65B9;&#x6848;&#x3002;client &#x80FD;&#x591F;&#x4ECE;&#x5217;&#x8868;&#x4E2D;(auth,auth-int)&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x3002;</p>
+<ul>
+<li>auth &#x8868;&#x793A;&#x4EC5;&#x4EC5;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x67E5;&#x9A8C;&#xFF0C;</li>
+<li>auth-int &#x8868;&#x793A;&#x8FDB;&#x884C;&#x67E5;&#x9A8C;&#x5916;&#xFF0C;&#x53E6;&#x4E00;&#x4E9B;&#x5B8C;&#x6574;&#x6027;&#x4FDD;&#x62A4;&#x3002;</li>
+</ul>
+<p>&#x65B0;&#x5EFA; http &#x8BF7;&#x6C42;&#xFF1A;digest-auth &#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x540D;&#x4E3A; zxw2018 &#x5BC6;&#x7801;&#x4E3A;&#xFF1A;8888 &#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/2c63c918-f74b-46e6-a482-532791e15540.png" alt=""></p>
+<p>&#x7136;&#x540E;&#x6DFB;&#x52A0; HTTP &#x6388;&#x6743;&#x7BA1;&#x7406;&#x5668; &#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/7ae930a0-ec0d-4ae2-887a-3bab6c7f8b24.jpg" alt=""></p>
+<p>&#x6267;&#x884C;&#x4E4B;&#x540E;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>{&quot;authenticated&quot;:true,&quot;user&quot;:&quot;zxw2018&quot;}
+</code></pre><p>&#x8BF7;&#x6C42;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code>GET http://httpbin.org/digest-auth/auth/zxw2018/8888
+GET data:
+[no cookies]
+Request Headers:
+Connection: keep-alive
+Host: httpbin.org
+User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_05)
+Authorization: Digest username=&quot;zxw2018&quot;, realm=&quot;me@kennethreitz.com&quot;,
+nonce=&quot;251670f7b11c5026ab699a02906fffb8&quot;, uri=&quot;/digest-auth/auth/zxw2018/8888&quot;,
+response=&quot;23a0c70610b80d1f2daaf9cad6cc63f1&quot;, qop=auth, nc=00000001, cnonce=&quot;fedb59626b738c01&quot;,
+algorithm=MD5, opaque=&quot;0bfc81209d832d1858f8bb4c4e4d01b6&quot;
+</code></pre><p>&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;&#x8BF7;&#x6C42;&#x5185;&#x5BB9; Authorization &#x503C;&#x548C;&#x4E4B;&#x524D;&#x7684; Basic Auth &#x6709;&#x4E0D;&#x4E00;&#x6837;&#x3002;</p>
+<hr>
+<h2 id="&#x6D4B;&#x8BD5;&#x62A5;&#x544A;"><a name="&#x6D4B;&#x8BD5;&#x62A5;&#x544A;" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;&#x62A5;&#x544A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;&#x62A5;&#x544A;</h2>
+<p>&#x6279;&#x91CF;&#x6267;&#x884C;&#x5B8C;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x67E5;&#x770B;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;&#xFF0C;&#x5728;&#x4E4B;&#x524D;&#x5355;&#x4E2A;&#x63A5;&#x53E3;&#x8C03;&#x8BD5;&#x6211;&#x4EEC;&#x662F;&#x901A;&#x8FC7;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x6811;&#x67E5;&#x770B;&#x7ED3;&#x679C;&#xFF0C;&#x4F46;&#x662F;&#x5F53;&#x5927;
+&#x6279;&#x91CF;&#x6267;&#x884C;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x4E4B;&#x540E;&#x4F9D;&#x65E7;&#x8FD9;&#x6837;&#x67E5;&#x770B;&#x90A3;&#x4E48;&#x80AF;&#x5B9A;&#x4F1A;&#x5F88;&#x4F4E;&#x6548; &#x90A3;&#x4E48;&#x8BE5;&#x5982;&#x4F55;&#x8BBE;&#x7F6E;&#x5462;&#xFF1F;</p>
+<h3 id="&#x805A;&#x5408;&#x62A5;&#x544A;"><a name="&#x805A;&#x5408;&#x62A5;&#x544A;" class="anchor-navigation-ex-anchor" href="#&#x805A;&#x5408;&#x62A5;&#x544A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x805A;&#x5408;&#x62A5;&#x544A;</h3>
+<p>&#x805A;&#x5408;&#x62A5;&#x544A;&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x7CBE;&#x7B80;&#x7684;&#x62A5;&#x544A;&#x5143;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x6BCF;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x6027;&#x80FD;&#x60C5;&#x51B5;&#x4E0E;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x3002; &#x8BBE;&#x7F6E;&#x6B65;&#x9AA4;&#xFF1A;&#x9009;&#x4E2D;&#x7EBF;&#x7A0B;&#x7EC4;&#x2014;&#x2014;&#x6DFB;
+&#x52A0;&#x2014;&#x2014;&#x76D1;&#x542C;&#x5668;&#x2014;&#x2014;&#x805A;&#x5408;&#x62A5;&#x544A;&#x3002;</p>
+<p><img src="index_files/96b91ea4-c6d1-49b1-9c09-8559a219f9f5.jpg" alt=""></p>
+<p>&#x62A5;&#x544A;&#x5404;&#x4E2A;&#x53C2;&#x6570;&#x542B;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>Samples -- &#x672C;&#x6B21;&#x573A;&#x666F;&#x4E2D;&#x4E00;&#x5171;&#x5B8C;&#x6210;&#x4E86;&#x591A;&#x5C11;&#x4E2A;&#x8BF7;&#x6C42;</li>
+<li>Average -- &#x5E73;&#x5747;&#x54CD;&#x5E94;&#x65F6;&#x95F4;(&#x5355;&#x4F4D;&#xFF1A;ms)</li>
+<li>Median -- &#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x7684;&#x4E2D;&#x503C;(&#x5355;&#x4F4D;&#xFF1A;ms)</li>
+<li>90% Line -- &#x6240;&#x6709;&#x8BF7;&#x6C42;&#x4E2D; 90%&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x3002;</li>
+<li>Min -- &#x6700;&#x5C0F;&#x54CD;&#x5E94;&#x65F6;&#x95F4;(&#x5355;&#x4F4D;&#xFF1A;ms)</li>
+<li>Max -- &#x6700;&#x5927;&#x54CD;&#x5E94;&#x65F6;&#x95F4;(&#x5355;&#x4F4D;&#xFF1A;ms)</li>
+<li>Error -- &#x51FA;&#x9519;&#x7387;</li>
+<li>Troughput -- &#x541E;&#x5410;&#x91CF;</li>
+<li>Received--&#x54CD;&#x5E94;&#x6570;&#x636E;&#x5927;&#x5C0F;</li>
+<li>KB/sec -- &#x4EE5;&#x6D41;&#x91CF;&#x505A;&#x8861;&#x91CF;&#x7684;&#x541E;&#x5410;&#x91CF;</li>
+</ul>
+<h3 id="html-&#x62A5;&#x544A;"><a name="html-&#x62A5;&#x544A;" class="anchor-navigation-ex-anchor" href="#html-&#x62A5;&#x544A;"><i class="fa fa-link" aria-hidden="true"></i></a>HTML &#x62A5;&#x544A;</h3>
+<p>&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;&#x4EE5; HTML &#x9644;&#x4EF6;&#x5F62;&#x5F0F;&#x53D1;&#x9001;&#x7ED9;&#x5404;&#x4E2A;&#x9879;&#x76EE;&#x6210;&#x5458;&#xFF0C;&#x90A3;&#x4E48;&#x9700;&#x8981;&#x751F;&#x6210; HTML &#x62A5;&#x544A;&#x3002; JMeter3.0 &#x4EE5;&#x540E;
+&#x5F15;&#x5165;&#x4E86; Dashboard Report&#xFF0C;&#x7528;&#x4E8E;&#x751F;&#x6210; HTML &#x9875;&#x9762;&#x683C;&#x5F0F;&#x56FE;&#x5F62;&#x5316;&#x62A5;&#x544A;&#x7684;&#x6269;&#x5C55;&#x6A21;&#x5757;&#x3002;</p>
+<p>&#x751F;&#x6210;&#x6B65;&#x9AA4;&#xFF1A;
+&#x6253;&#x5F00; cmd &#x8FDB;&#x5165; jmeter &#x76EE;&#x5F55; bin &#x76EE;&#x5F55;</p>
+<p>&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code>jmeter -n -t httpbin_test.jmx -l httpbin.jtl -e -o C:\Users\Shuqing\Desktop\report
+</code></pre><p>&#x547D;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>-n &#xFF1A;&#x4EE5;&#x975E; GUI &#x5F62;&#x5F0F;&#x8FD0;&#x884C; Jmeter</li>
+<li>-t &#xFF1A;jmeter &#x811A;&#x672C;&#x8DEF;&#x5F84;</li>
+<li>-l &#xFF1A;result.jtl &#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#xFF08;.jtl&#xFF09;&#x6B64;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x4E0D;&#x5B58;&#x5728;&#x3002;</li>
+<li>-e &#xFF1A;&#x5728;&#x811A;&#x672C;&#x8FD0;&#x884C;&#x7ED3;&#x675F;&#x540E;&#x751F;&#x6210; html &#x62A5;&#x544A;</li>
+<li>-o &#xFF1A;&#x7528;&#x4E8E;&#x5B58;&#x653E; html &#x62A5;&#x544A;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x4E0D;&#x52A0;&#x8BE5;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x751F;&#x6210;&#x5230; bin\report-output</li>
+</ul>
+<p>&#x751F;&#x6210;&#x7684;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;&#x6837;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/88a92f8f-bbe5-4154-8a84-30e264a3a9f0.jpg" alt=""></p>
+<p><img src="index_files/fc84904d-5d30-45e2-943b-fb078651d5e8.png" alt=""></p>
+<hr>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a name="&#x53C2;&#x8003;&#x8D44;&#x6599;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;&#x8D44;&#x6599;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<ul>
+<li><a href="https://baike.baidu.com/item/Jmeter/3104456?fr=aladdin" target="_blank">https://baike.baidu.com/item/Jmeter/3104456?fr=aladdin</a></li>
+<li><a href="https://blog.csdn.net/zhizunyu2009/article/details/79011413" target="_blank">https://blog.csdn.net/zhizunyu2009/article/details/79011413</a></li>
+<li><a href="https://blog.csdn.net/gld824125233/article/details/52842914" target="_blank">https://blog.csdn.net/gld824125233/article/details/52842914</a></li>
+<li><a href="https://blog.csdn.net/defonds/article/details/53517247" target="_blank">https://blog.csdn.net/defonds/article/details/53517247</a></li>
+<li><a href="https://stackoverflow.com/questions/12560494/jmeter-basic-authentication" target="_blank">https://stackoverflow.com/questions/12560494/jmeter-basic-authentication</a></li>
+<li><a href="https://blog.csdn.net/wuyou10206/article/details/77539791" target="_blank">https://blog.csdn.net/wuyou10206/article/details/77539791</a></li>
+<li><a href="https://blog.csdn.net/huangjuyan/article/details/52993758" target="_blank">https://blog.csdn.net/huangjuyan/article/details/52993758</a></li>
+<li><a href="https://www.houxue.com/news-1279775/" target="_blank">https://www.houxue.com/news-1279775/</a></li>
+<li><a href="https://blog.csdn.net/qq_35451939/article/details/79716010" target="_blank">https://blog.csdn.net/qq_35451939/article/details/79716010</a></li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/monsterone" target="_blank">monster</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2020-02-11 05:48:40 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Postman教案.html" class="navigation navigation-prev " aria-label="Previous page: 第1节：Postman教案">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Jmeter+Ant+Jenkins接口自动化测试平台.html" class="navigation navigation-next " aria-label="Next page: 第3节：Jmeter+Ant+Jenkins接口自动化测试平台">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第2节：Jmeter接口测试","level":"1.3.2","depth":2,"next":{"title":"第3节：Jmeter+Ant+Jenkins接口自动化测试平台","level":"1.3.3","depth":2,"path":"第二章/Jmeter+Ant+Jenkins接口自动化测试平台.md","ref":"第二章/Jmeter+Ant+Jenkins接口自动化测试平台.md","articles":[]},"previous":{"title":"第1节：Postman教案","level":"1.3.1","depth":2,"path":"第二章/Postman教案.md","ref":"第二章/Postman教案.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","disqus","github-buttons","editlink","ga","-highlight","prism","bibtex-indexed-cite","anchor-navigation-ex","page-footer-ex","splitter","todo","copy-code-button","expandable-chapters-small","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"ignore":["mermaid","eval-js"],"css":["prismjs/themes/prism-solarizedlight.css"]},"disqus":{"useIdentifier":false,"shortName":"gitbook-template"},"editlink":{"label":"Edit","multilingual":false,"base":"https://github.com/monster/mybook/blob/master"},"todo":{},"page-footer-ex":{"copyright":"By [monster](https://github.com/monsterone)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"bibtex-indexed-cite":{"path":"/"},"github-buttons":{"buttons":[{"user":"monster","repo":"mybook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-131910384-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"接口","bib":[],"gitbook":"*"},"file":{"path":"第二章/Jmeter接口测试.md","mtime":"2020-02-11T05:48:40.855Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-11T05:49:29.114Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

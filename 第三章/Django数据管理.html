@@ -1,0 +1,1161 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第4节：Django数据管理 · 接口</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Locust接口性能测试.html" />
+    
+    
+    <link rel="prev" href="Restful接口开发与测试.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"monster","repo":"mybook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第一章/">
+            
+                <a href="../第一章/">
+            
+                    
+                    第一章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第一章/课程简介&接口测试概述.html">
+            
+                <a href="../第一章/课程简介&接口测试概述.html">
+            
+                    
+                    第1节：课程简介&接口测试概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第一章/HTTP协议基础.html">
+            
+                <a href="../第一章/HTTP协议基础.html">
+            
+                    
+                    第2节：HTTP协议基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第一章/JSON数据.html">
+            
+                <a href="../第一章/JSON数据.html">
+            
+                    
+                    第3节：JSON数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第二章/">
+            
+                <a href="../第二章/">
+            
+                    
+                    第二章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第二章/Postman教案.html">
+            
+                <a href="../第二章/Postman教案.html">
+            
+                    
+                    第1节：Postman教案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第二章/Jmeter接口测试.html">
+            
+                <a href="../第二章/Jmeter接口测试.html">
+            
+                    
+                    第2节：Jmeter接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第二章/Jmeter+Ant+Jenkins接口自动化测试平台.html">
+            
+                <a href="../第二章/Jmeter+Ant+Jenkins接口自动化测试平台.html">
+            
+                    
+                    第3节：Jmeter+Ant+Jenkins接口自动化测试平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第二章/jmeter基础使用手册.html">
+            
+                <a href="../第二章/jmeter基础使用手册.html">
+            
+                    
+                    第4节：jmeter基础使用手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第三章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Requests库使用.html">
+            
+                <a href="Requests库使用.html">
+            
+                    
+                    第1节：Requests库使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Python接口测试实践——基于天气API.html">
+            
+                <a href="Python接口测试实践——基于天气API.html">
+            
+                    
+                    第2节：Python接口测试实践——基于天气API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="Restful接口开发与测试.html">
+            
+                <a href="Restful接口开发与测试.html">
+            
+                    
+                    第3节：Restful接口开发与测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="Django数据管理.html">
+            
+                <a href="Django数据管理.html">
+            
+                    
+                    第4节：Django数据管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="Locust接口性能测试.html">
+            
+                <a href="Locust接口性能测试.html">
+            
+                    
+                    第5节：Locust接口性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="Mock利器——Json Server.html">
+            
+                <a href="Mock利器——Json Server.html">
+            
+                    
+                    第6节：Mock利器——Json Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="HttpRunner接口自动化测试框架.html">
+            
+                <a href="HttpRunner接口自动化测试框架.html">
+            
+                    
+                    第7节：HttpRunner接口自动化测试框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第四章/">
+            
+                <a href="../第四章/">
+            
+                    
+                    第四章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第四章/接口测试面试题.html">
+            
+                <a href="../第四章/接口测试面试题.html">
+            
+                    
+                    第1节：接口测试面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第4节：Django数据管理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;4&#x8282;&#xFF1A;django&#x6570;&#x636E;&#x7BA1;&#x7406;"><b></b>&#x7B2C;4&#x8282;&#xFF1A;Django&#x6570;&#x636E;&#x7BA1;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#&#x95EE;&#x9898;&#x601D;&#x8003;"><b></b>&#x95EE;&#x9898;&#x601D;&#x8003;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x51B3;&#x601D;&#x8DEF;"><b></b>&#x89E3;&#x51B3;&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#django-&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;"><b></b>Django &#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#mysql-&#x7B80;&#x4ECB;"><b></b>mysql &#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#mysql-&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"><b></b>mysql &#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#navicat"><b></b>Navicat</a></li></ul><li><span class="title-icon "></span><a href="#django-&#x8FC1;&#x79FB;-mysql"><b></b>Django &#x8FC1;&#x79FB; MySql</a></li><ul><li><span class="title-icon "></span><a href="#&#x4FEE;&#x6539;-setting-&#x914D;&#x7F6E;"><b></b>&#x4FEE;&#x6539; Setting &#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;-mysqldb-&#x9A71;&#x52A8;"><b></b>&#x5B89;&#x88C5; MySQLdb &#x9A71;&#x52A8;</a></li><li><span class="title-icon "></span><a href="#&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;"><b></b>&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;-models"><b></b>&#x521B;&#x5EFA; Models</a></li><li><span class="title-icon "></span><a href="#&#x5BFC;&#x5165;-models"><b></b>&#x5BFC;&#x5165; Models</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x5E93;&#x8FC1;&#x79FB;"><b></b>&#x6570;&#x636E;&#x5E93;&#x8FC1;&#x79FB;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x5E93;&#x521D;&#x59CB;&#x5316;"><b></b>&#x6570;&#x636E;&#x5E93;&#x521D;&#x59CB;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;"><b></b>&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;"><b></b>&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;</a></li><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5C01;&#x88C5;"><b></b>&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5C01;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x6267;&#x884C;&#x7528;&#x4F8B;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;"><b></b>&#x6267;&#x884C;&#x7528;&#x4F8B;&amp;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;</a></li><li><span class="title-icon "></span><a href="#&#x65E5;&#x5FD7;&#x914D;&#x7F6E;"><b></b>&#x65E5;&#x5FD7;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x96C6;&#x6210;-jenkins"><b></b>&#x96C6;&#x6210; Jenkins</a></li><li><span class="title-icon "></span><a href="#jenkins-&#x5B9A;&#x65F6;&#x6784;&#x5EFA;&#x8BED;&#x6CD5;"><b></b>Jenkins &#x5B9A;&#x65F6;&#x6784;&#x5EFA;&#x8BED;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#python-&#x90AE;&#x4EF6;&#x53D1;&#x9001;"><b></b>Python &#x90AE;&#x4EF6;&#x53D1;&#x9001;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;"><b></b>&#x53C2;&#x8003;&#x8D44;&#x6599;</a></li></ul></ul></div><a href="#&#x7B2C;4&#x8282;&#xFF1A;django&#x6570;&#x636E;&#x7BA1;&#x7406;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;4&#x8282;&#xFF1A;django&#x6570;&#x636E;&#x7BA1;&#x7406;"><a name="&#x7B2C;4&#x8282;&#xFF1A;django&#x6570;&#x636E;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;4&#x8282;&#xFF1A;django&#x6570;&#x636E;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;4&#x8282;&#xFF1A;Django&#x6570;&#x636E;&#x7BA1;&#x7406;</h1>
+<h2 id="&#x95EE;&#x9898;&#x601D;&#x8003;"><a name="&#x95EE;&#x9898;&#x601D;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x95EE;&#x9898;&#x601D;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x95EE;&#x9898;&#x601D;&#x8003;</h2>
+<p>&#x5728;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x7531;&#x4E8E;&#x6709;&#x4E9B;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x5E76;&#x4E0D;&#x662F;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x6BD4;&#x5982; DELETE &#x7C7B;&#x578B;&#xFF0C;&#x4E0A;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#x4E0B;&#x4E00;&#x6B21;&#x518D;&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x5C31;&#x4E0D;&#x4E00;
+&#x6837;&#x4E86;&#x3002;&#x751A;&#x81F3;&#x6709;&#x65F6;&#x63A5;&#x53E3;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x8FD8;&#x4F1A;&#x76F8;&#x4E92;&#x5E72;&#x6270;&#xFF0C; &#x5BFC;&#x81F4;&#x63A5;&#x53E3;&#x65AD;&#x8A00;&#x5931;&#x8D25;&#x65F6;&#x4E0D;&#x80FD;&#x65AD;&#x5B9A;&#x5230;&#x5E95;&#x662F;&#x63A5;&#x53E3;&#x7A0B;&#x5E8F;&#x5F15;&#x8D77;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x8FD8;&#x662F;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x53D8;&#x5316;&#x5F15;&#x8D77;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x5982;&#x4F55;&#x6709;&#x6548;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5462;&#xFF1F;</p>
+<h2 id="&#x89E3;&#x51B3;&#x601D;&#x8DEF;"><a name="&#x89E3;&#x51B3;&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x51B3;&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x51B3;&#x601D;&#x8DEF;</h2>
+<p>&#x901A;&#x8FC7;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6BCF;&#x8F6E;&#x6D4B;&#x8BD5;&#x4E4B;&#x524D;&#x5C06;&#x6570;&#x636E;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x8FD9;&#x6837;&#x907F;&#x514D;&#x6570;&#x636E;&#x5E72;&#x6270;&#x3002;</p>
+<h2 id="django-&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;"><a name="django-&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#django-&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>Django &#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;</h2>
+<p>&#x5728;&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x7684;&#x63A5;&#x53E3;&#x9879;&#x76EE; django_resutful &#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x5E93;&#x662F; Python &#x81EA;&#x5E26;&#x7684; SQLite3&#x3002;
+Django &#x8FD8;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x6570;&#x636E;&#x5E93;&#xFF1A;
+&#x2022; <a href="http://postgresql.org/" target="_blank">PostgreSQL</a>
+&#x2022; <a href="http://www.mysql.com/" target="_blank">MySQL</a>
+&#x2022; <a href="http://www.oracle.com/" target="_blank">Oracle</a>
+&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C06;&#x4F1A;&#x4EE5; Mysql &#x6765;&#x8FDB;&#x884C;&#x6F14;&#x793A;&#x3002;</p>
+<h3 id="mysql-&#x7B80;&#x4ECB;"><a name="mysql-&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#mysql-&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>mysql &#x7B80;&#x4ECB;</h3>
+<p>MySQL &#x662F;&#x4E00;&#x4E2A;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#xFF0C;&#x7531;&#x745E;&#x5178; MySQL AB &#x516C;&#x53F8;&#x5F00;&#x53D1;&#xFF0C;&#x76EE;&#x524D;&#x5C5E;&#x4E8E; Oracle &#x65D7;&#x4E0B;&#x4EA7;&#x54C1;&#x3002;MySQL &#x662F;
+&#x6700;&#x6D41;&#x884C;&#x7684;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E4B;&#x4E00;&#xFF0C;&#x5728; WEB &#x5E94;&#x7528;&#x65B9;&#x9762;&#xFF0C;MySQL &#x662F;&#x6700;&#x597D;&#x7684; RDBMS (Relational Database
+Management System&#xFF0C;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;) &#x5E94;&#x7528;&#x8F6F;&#x4EF6;&#x3002;</p>
+<h3 id="mysql-&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"><a name="mysql-&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#mysql-&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>mysql &#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</h3>
+<p>&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="https://dev.mysql.com/downloads/installer/" target="_blank">https://dev.mysql.com/downloads/installer/</a>
+&#x5B89;&#x88C5;&#x6559;&#x7A0B;&#xFF1A;<a href="http://www.51zxw.net/list.aspx?cid=651" target="_blank">&#x81EA;&#x5B66;&#x7F51;-Mysql &#x6559;&#x7A0B;</a></p>
+<h3 id="navicat"><a name="navicat" class="anchor-navigation-ex-anchor" href="#navicat"><i class="fa fa-link" aria-hidden="true"></i></a>Navicat</h3>
+<p>Navicat &#x662F;&#x4E00;&#x5957;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x4E13;&#x4E3A;&#x7B80;&#x5316;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7BA1;&#x7406;&#x53CA;&#x964D;&#x4F4E;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x6210;&#x672C;&#x800C;&#x8BBE;&#x3002;Navicat &#x662F;&#x4EE5;&#x76F4;&#x89C9;&#x5316;&#x7684;&#x56FE;&#x5F62;&#x7528;&#x6237;&#x754C;&#x9762;&#x800C;&#x5EFA;&#x7684;&#xFF0C;&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x4EE5;&#x5B89;&#x5168;&#x5E76;&#x4E14;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;&#x3001;&#x7EC4;&#x7EC7;&#x3001;&#x8BBF;&#x95EE;&#x5E76;&#x5171;&#x7528;&#x4FE1;&#x606F;&#x3002;</p>
+<h2 id="django-&#x8FC1;&#x79FB;-mysql"><a name="django-&#x8FC1;&#x79FB;-mysql" class="anchor-navigation-ex-anchor" href="#django-&#x8FC1;&#x79FB;-mysql"><i class="fa fa-link" aria-hidden="true"></i></a>Django &#x8FC1;&#x79FB; MySql</h2>
+<h3 id="&#x4FEE;&#x6539;-setting-&#x914D;&#x7F6E;"><a name="&#x4FEE;&#x6539;-setting-&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;-setting-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539; Setting &#x914D;&#x7F6E;</h3>
+<p>&#x9996;&#x5148;&#x6253;&#x5F00; setting.py &#x5C06; DATABASES &#x4FEE;&#x6539;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>DATABASES = {
+    &apos;default&apos;: {
+        # &apos;ENGINE&apos;: &apos;django.db.backends.sqlite3&apos;,
+        # &apos;NAME&apos;: os.path.join(BASE_DIR, &apos;db.sqlite3&apos;),
+        &apos;ENGINE&apos;:&apos;django.db.backends.mysql&apos;,
+        &apos;HOST&apos;:&apos;127.0.0.1&apos;,
+        &apos;PORT&apos;:&apos;3306&apos;,
+        &apos;NAME&apos;:&apos;django_restful&apos;,
+        &apos;USER&apos;:&apos;root&apos;,
+        &apos;PASSWORD&apos;:&apos;&apos;,
+        &apos;OPTIONS&apos;:{
+            &apos;isolation_level&apos;:None,
+            &apos;init_command&apos;: &quot;SET sql_mode=&apos;STRICT_TRANS_TABLES&apos;&quot;, },
+    }
+}
+</code></pre><p>&#x4E5F;&#x5C31;&#x662F;&#x5C06;&#x539F;&#x6765; sqllite &#x6362;&#x6210; Mysql</p>
+<h3 id="&#x5B89;&#x88C5;-mysqldb-&#x9A71;&#x52A8;"><a name="&#x5B89;&#x88C5;-mysqldb-&#x9A71;&#x52A8;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;-mysqldb-&#x9A71;&#x52A8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5; MySQLdb &#x9A71;&#x52A8;</h3>
+<p>&#x518D;&#x6253;&#x5F00; django<em>restful &#x4E2D;&#x7684;<em>_init</em></em>.py&#xFF0C;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code>import pymysql
+pymysql.install_as_MySQLdb()
+</code></pre><p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x8868;&#x793A;&#x5B89;&#x88C5; MySQLdb &#x9A71;&#x52A8;&#x3002;</p>
+<h3 id="&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;"><a name="&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;</h3>
+<p>&#x4F7F;&#x7528; Navicat &#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="index_files/9828bb14-041f-424f-b1da-9d29a140bd86.jpg" alt=""></p>
+<p>&#x7136;&#x540E;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93; django_restful</p>
+<h3 id="&#x521B;&#x5EFA;-models"><a name="&#x521B;&#x5EFA;-models" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;-models"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA; Models</h3>
+<p>Django &#x63D0;&#x4F9B;&#x4E86;&#x5B8C;&#x5584;&#x7684;&#x6A21;&#x578B;&#xFF08;model&#xFF09;&#x5C42;&#x6765;&#x521B;&#x5EFA;&#x548C;&#x5B58;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4F60;&#x6240;&#x50A8;&#x5B58;&#x6570;&#x636E;&#x7684;&#x5FC5;&#x8981;&#x5B57;&#x6BB5;&#x548C;&#x884C;&#x4E3A;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x6BCF;&#x4E2A;&#x6A21;&#x578B;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x552F;&#x4E00;&#x7684;&#x4E00;&#x5F20;&#x8868;&#x3002;</p>
+<p>&#x6253;&#x5F00; api &#x4E2D;&#x7684; models.py &#x521B;&#x5EFA;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code>from django.db import models
+
+# Create your models here.
+class User(models.Model):
+    username=models.CharField(max_length=100)
+    email=models.CharField(max_length=100)
+    groups=models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.username
+
+class Group(models.Model):
+    name=models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+</code></pre><p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x8868;&#x793A;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8868;&#xFF0C;&#x4E00;&#x4E2A;&#x662F; User&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x662F; Group
+&#x5176;&#x4E2D; <code>def __str__()</code>&#x7684;&#x4F5C;&#x7528;&#x662F;&#x7F8E;&#x5316;&#x5B57;&#x6BB5;&#x7684;&#x663E;&#x793A;&#xFF0C;&#x65B9;&#x4FBF;&#x67E5;&#x770B;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;<strong>st</strong>&#x65B9;&#x6CD5;&#xFF0C;&#x663E;&#x793A;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x7C7B;&#x4F3C;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>__main__.Testobject</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000022D6D1387B8</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Django &#x6A21;&#x578B;&#x5B57;&#x6BB5;&#x5E38;&#x7528;&#x7C7B;&#x578B;</p>
+<p><img src="index_files/124b28f5-93a4-4ef7-8091-b2b6ec38fae4.jpg" alt=""></p>
+<p><img src="index_files/307688bf-8694-48a3-ac36-e8c74ad33f32.jpg" alt=""></p>
+<h3 id="&#x5BFC;&#x5165;-models"><a name="&#x5BFC;&#x5165;-models" class="anchor-navigation-ex-anchor" href="#&#x5BFC;&#x5165;-models"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BFC;&#x5165; Models</h3>
+<p>&#x521B;&#x5EFA;&#x597D; Model &#x540E;&#x9700;&#x8981;&#x5206;&#x522B;&#x5728; serializers.py &#x548C; views.py &#x6765;&#x5BFC;&#x5165;&#xFF0C;&#x540C;&#x65F6;&#x53BB;&#x6389; danjo &#x9ED8;&#x8BA4;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;
+<strong>serializers.py</strong></p>
+<pre class="language-"><code># from django.contrib.auth.models import User,Group
+from rest_framework import serializers
+from api.models import User,Group
+</code></pre><p><strong>views.py</strong></p>
+<pre class="language-"><code># from django.contrib.auth.models import User,Group
+from rest_framework import viewsets
+
+from api.serializers import UserSerializer,GroupSerializer
+from api.models import User,Group
+</code></pre><h3 id="&#x6570;&#x636E;&#x5E93;&#x8FC1;&#x79FB;"><a name="&#x6570;&#x636E;&#x5E93;&#x8FC1;&#x79FB;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x8FC1;&#x79FB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5E93;&#x8FC1;&#x79FB;</h3>
+<pre class="language-"><code>python manage.py makemigrations api
+python manage.py migrate
+</code></pre><p>&#x8FC1;&#x79FB;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x6237;&#xFF0C;&#x7136;&#x540E;&#x767B;&#x5F55;&#x3002;</p>
+<pre class="language-"><code>python manage.py createsuperuser
+</code></pre><h3 id="&#x6570;&#x636E;&#x5E93;&#x521D;&#x59CB;&#x5316;"><a name="&#x6570;&#x636E;&#x5E93;&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5E93;&#x521D;&#x59CB;&#x5316;</h3>
+<h3 id="&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;"><a name="&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;</h3>
+<p>&#x6570;&#x636E;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#xFF0C;&#x6570;&#x636E;&#x6E05;&#x9664;&#x3001;&#x6570;&#x636E;&#x63D2;&#x5165;&#x3001;&#x5173;&#x95ED;&#x6570;&#x636E;&#x5E93;&#x3002; &#x5728; api &#x9879;&#x76EE;&#x4E0B;&#x9762;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;
+test_project &#x7136;&#x540E;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#xFF1A;mysql_action.py</p>
+<p>&#x6269;&#x5C55;&#x8D44;&#x6599;&#xFF1A;<a href="https://www.1keydata.com/cn/sql/sql-select.php" target="_blank">SQL &#x547D;&#x4EE4;&#x6559;&#x7A0B;</a></p>
+<pre class="language-"><code>from pymysql import connect
+import yaml
+
+class DB():
+        def __init__(self):
+        &apos;&apos;&apos;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&apos;&apos;&apos;
+        print(&apos;connect db&apos;)
+        self.conn=connect(host=&apos;127.0.0.1&apos;,user=&apos;root&apos;,
+        password=&apos;&apos;,db=&apos;django_restful&apos;)
+
+    def clear(self,table_name):
+    &apos;&apos;&apos;&#x6E05;&#x9664;&#x8868;&#x4E2D;&#x6570;&#x636E;&apos;&apos;&apos;
+    print(&apos;clear db...&apos;)
+    clear_sql = &apos;truncate &apos; + table_name + &apos;;&apos;
+    with self.conn.cursor() as cursor:
+        #&#x6E05;&#x9664;&#x5916;&#x952E;&#x7EA6;&#x675F;
+        cursor.execute(&quot;set foreign_key_checks=0;&quot;)
+        cursor.execute(clear_sql)
+    self.conn.commit()
+
+def insert(self, table_name, table_data):
+    &apos;&apos;&apos;&#x63D2;&#x5165;&#x6570;&#x636E;&apos;&apos;&apos;
+    print(&apos;insert db...&apos;)
+
+    #&#x904D;&#x5386;&#x6570;&#x636E;
+    for key in table_data:
+    table_data[key] = &quot;&apos;&quot; + str(table_data[key]) + &quot;&apos;&quot;
+
+    key = &apos;,&apos;.join(table_data.keys())
+    value = &apos;,&apos;.join(table_data.values())
+
+    print(key)
+    print(value)
+
+    insert_sql = &quot;insert into &quot; + table_name + &quot;(&quot; + key + &quot;)&quot; + &quot;values&quot; + &quot;(&quot; + value + &quot;)&quot;
+    print(inser_sql)
+
+    with self.conn.cursor() as cursor:
+        cursor.execute(insert_sql)
+    self.conn.commit()
+
+
+def close(self):
+    &apos;&apos;&apos;&#x5173;&#x95ED;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&apos;&apos;&apos;
+    print(&apos;close db&apos;)
+    self.conn.close()
+
+def init_data(self, datas):
+    &apos;&apos;&apos;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&apos;&apos;&apos;
+    print(&apos;init db...&apos;)
+    for table, data in datas.items():
+        self.clear(table)
+        for d in data:
+            self.insert(table, d)
+    self.close()
+
+
+if __name__ == &apos;__main__&apos;:
+    db=DB()
+    #&#x8C03;&#x8BD5;&#x5404;&#x4E2A;&#x65B9;&#x6CD5;
+    db.clear(&apos;api_user&apos;)
+    db.clear(&apos;api_group&apos;)
+    user_data={&apos;id&apos;:1,&apos;username&apos;:&apos;51zxw&apos;,&apos;email&apos;:&apos;51zxw@163.com&apos;}
+    db.insert(&apos;api_user&apos;,user_data)
+    group_data={&apos;id&apos;:1,&apos;name&apos;:&apos;Developer&apos;}
+    db.insert(&apos;api_group&apos;,group_data)
+    db.close()
+
+    #&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;
+    f=open(&apos;datas.yaml&apos;,&apos;r&apos;)
+    datas=yaml.load(f)
+    db.init_data(datas)
+</code></pre><h3 id="&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;"><a name="&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C01;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;</h3>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#x4F7F;&#x7528; Yaml &#x6765;&#x5C01;&#x88C5;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x4E0E;&#x4EE3;&#x7801;&#x5206;&#x79BB;&#xFF0C;&#x65B9;&#x4FBF;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x7684;&#x7EF4;&#x62A4;&#x3002;&#x5728; test_project &#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;datas.yaml &#x6570;&#x636E;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>
+api_user:
+    - id: 1
+    username: sutune
+    email: sutune@163.com
+    groups: http://127.0.0.1:8000/groups/1/
+
+    - id: 2
+    username: 51zxw
+    email: 51zxw@163.com
+    groups: http://127.0.0.1:8000/groups/2/
+
+api_group:
+    - id: 1
+    name: Developer
+    - id: 2
+    name: Tester
+</code></pre><p>&#x6269;&#x5C55;&#x8D44;&#x6599;&#xFF1A; <a href="http://www.51zxw.net/list.aspx?page=3&amp;cid=670" target="_blank">Appium yaml &#x6559;&#x7A0B; 5-1~5-4</a></p>
+<p>&#x6267;&#x884C;&#x521D;&#x59CB;&#x5316;&#x540E;&#x6570;&#x636E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/94098426-1f0c-494d-9552-f04dfa6fad73.jpg" alt=""></p>
+<p><img src="index_files/3f8ac2fc-d7d0-4212-8c76-3537031060d7.jpg" alt=""></p>
+<h3 id="&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5C01;&#x88C5;"><a name="&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5C01;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5C01;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5C01;&#x88C5;</h3>
+<p>&#x5728; test_project &#x4E0B;&#x9762;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x6A21;&#x5757; test_diango_restful.py
+<strong>test_django_restful.py</strong></p>
+<pre class="language-"><code>import requests
+import unittest
+from mysql_action import DB
+import yaml
+
+class UserTest(unittest.TestCase):
+    def setUp(self):
+        self.base_url=&apos;http://127.0.0.1:8000/users&apos;
+        self.auth=(&apos;51zxw&apos;,&apos;zxw20182018&apos;)
+
+    def test_001_get_user(self):
+        r=requests.get(self.base_url+&apos;/1/&apos;,auth=self.auth)
+        result=r.json()
+
+        self.assertEqual(result[&apos;username&apos;],&apos;sutune&apos;)
+        self.assertEqual(result[&apos;email&apos;],&apos;sutune@163.com&apos;)
+
+    # @unittest.skip(&apos;skip add user&apos;)
+    def test_002_add_user(self):
+        form_data={&apos;id&apos;:3,&apos;username&apos;:&apos;zxw666&apos;,&apos;email&apos;:&apos;zxw666@qq.com&apos;,&apos;groups&apos;:&apos;http://127.0.0.1:8000/groups/2/&apos;}
+        r=requests.post(self.base_url+&apos;/&apos;,data=form_data,auth=self.auth)
+        result=r.json()
+
+        self.assertEqual(result[&apos;username&apos;],&apos;zxw666&apos;)
+
+    # @unittest.skip(&apos;skip test_delete_user&apos;)
+    def test_003_delete_user(self):
+        r=requests.delete(self.base_url+&apos;/2/&apos;,auth=self.auth)
+
+        self.assertEqual(r.status_code,204)
+
+    def test_004_update_user(self):
+        form_data={&apos;email&apos;:&apos;zxw2018@163.com&apos;}
+        r=requests.patch(self.base_url+&apos;/1/&apos;,auth=self.auth,data=form_data)
+        result=r.json()
+
+        self.assertEqual(result[&apos;email&apos;],&apos;zxw2018@163.com&apos;)
+
+    def test_005_no_auth(self):
+        r=requests.get(self.base_url)
+        result=r.json()
+
+        self.assertEqual(result[&apos;detail&apos;],&apos;Authentication credentials were not provided.&apos;)
+
+
+class GroupTest(unittest.TestCase):
+    def setUp(self):
+        self.base_url=&apos;http://127.0.0.1:8000/groups&apos;
+        self.auth=(&apos;51zxw&apos;,&apos;zxw20182018&apos;)
+
+    def test_001_group_developer(self):
+        r=requests.get(self.base_url+&apos;/1/&apos;,auth=self.auth)
+        result=r.json()
+
+        self.assertEqual(result[&apos;name&apos;],&apos;Developer&apos;)
+
+    def test_002_add_group(self):
+        form_data={&apos;name&apos;:&apos;Pm&apos;}
+        r=requests.post(self.base_url+&apos;/&apos;,auth=self.auth,data=form_data)
+        result=r.json()
+
+        self.assertEqual(result[&apos;name&apos;],&apos;Pm&apos;)
+
+    def test_003_update_group(self):
+        form_data={&apos;name&apos;:&apos;Boss&apos;}
+        r=requests.patch(self.base_url+&apos;/2/&apos;,auth=self.auth,data=form_data)
+        result=r.json()
+
+        self.assertEqual(result[&apos;name&apos;],&apos;Boss&apos;)
+
+    def test_004_detele_group(self):
+        r=requests.delete(self.base_url+&apos;/1/&apos;,auth=self.auth)
+
+        self.assertEqual(r.status_code,204)
+
+
+if __name__ == &apos;__main__&apos;:
+
+    db=DB()
+    f = open(&apos;datas.yaml&apos;, &apos;r&apos;)
+    datas = yaml.load(f)
+    db.init_data(datas)
+    unittest.main()
+</code></pre><p>&#x8FD9;&#x6837;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x56DE;&#x5F52;&#x6D4B;&#x8BD5;&#x5C31;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x6570;&#x636E;&#x73AF;&#x5883;&#x76F8;&#x4E92;&#x5E72;&#x6270;&#x7684;&#x95EE;&#x9898;&#x4E86;&#x3002;</p>
+<h3 id="&#x6267;&#x884C;&#x7528;&#x4F8B;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;"><a name="&#x6267;&#x884C;&#x7528;&#x4F8B;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;" class="anchor-navigation-ex-anchor" href="#&#x6267;&#x884C;&#x7528;&#x4F8B;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6267;&#x884C;&#x7528;&#x4F8B;&amp;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;</h3>
+<p>&#x5728; test_project &#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x521B;&#x5EFA; reports &#x76EE;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x65B0;&#x5EFA; run.py &#x6A21;&#x5757;&#x3002;</p>
+<pre class="language-"><code>
+import unittest
+from BSTestRunner import BSTestRunner
+from mysql_action import DB
+import time
+import yaml
+
+#&#x6570;&#x636E;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;
+db=DB()
+f = open(&apos;datas.yaml&apos;, &apos;r&apos;)
+datas = yaml.load(f)
+db.init_data(datas)
+
+#&#x6307;&#x5B9A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x548C;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;&#x7684;&#x8DEF;&#x5F84;
+test_dir = &apos;.&apos;
+report_dir = &apos;./reports&apos;
+
+#&#x52A0;&#x8F7D;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;
+discover = unittest.defaultTestLoader.discover(test_dir, pattern=&apos;test_django_restful.py&apos;)
+
+#&#x5B9A;&#x4E49;&#x62A5;&#x544A;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;
+now = time.strftime(&quot;%Y-%m-%d %H_%M_%S&quot;)
+report_name = report_dir + &apos;/&apos; + now + &apos; test_report.html&apos;
+
+#&#x8FD0;&#x884C;&#x7528;&#x4F8B;&#x5E76;&#x751F;&#x6210;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;
+with open(report_name, &apos;wb&apos;) as f:
+    runner = BSTestRunner(stream=f, title=&quot; API Test Report&quot;, description=&quot;Django Restful Api Test Report&quot;)
+    runner.run(discover)
+</code></pre><p>&#x6700;&#x540E;&#x751F;&#x6210;&#x7684;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="index_files/76df28a4-244b-4475-87e7-a6d2edb95d7f.jpg" alt=""></p>
+<h3 id="&#x65E5;&#x5FD7;&#x914D;&#x7F6E;"><a name="&#x65E5;&#x5FD7;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x65E5;&#x5FD7;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65E5;&#x5FD7;&#x914D;&#x7F6E;</h3>
+<p>&#x5728;&#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x65E5;&#x5FD7;&#x662F;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5F53;&#x8FD0;&#x884C;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#x6765;&#x5206;&#x6790;&#x5B9A;&#x4F4D;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x3002;&#x5728; test_project &#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x521B;&#x5EFA;&#x65E5;&#x5FD7;&#x914D;&#x7F6E;&#x6587;&#x4EF6; log.conf &#x4E0B;&#x9762;&#x65E5;&#x5FD7;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5B9A;&#x4E49;&#x7684;&#x65E5;&#x5FD7;&#x7684;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#xFF0C;&#x8F93;&#x51FA;&#x8DEF;&#x5F84;&#x7B49;&#x4FE1;&#x606F;&#x3002;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939; logs &#x5B58;&#x653E;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x3002;</p>
+<pre class="language-"><code>[loggers]
+keys=root,infoLogger
+
+[logger_root]
+level=DEBUG
+handlers=consoleHandler,fileHandler
+
+[logger_infoLogger]
+handlers=consoleHandler,fileHandler
+qualname=infoLogger
+propagate=0
+
+[handlers]
+keys=consoleHandler,fileHandler
+
+[handler_consoleHandler]
+class=StreamHandler
+level=INFO
+formatter=form02
+args=(sys.stdout,)
+
+[handler_fileHandler]
+class=FileHandler
+level=INFO
+formatter=form01
+args=(&apos;./logs/runlog.log&apos;, &apos;a&apos;)
+
+[formatters]
+keys=form01,form02
+
+[formatter_form01]
+format=%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s
+
+[formatter_form02]
+format=%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s
+</code></pre><p>&#x6269;&#x5C55;&#x8D44;&#x6599;: <a href="http://www.51zxw.net/list.aspx?page=3&amp;cid=670" target="_blank">Appium &#x6559;&#x7A0B; 5-6~5-10</a></p>
+<p>&#x5728; run.py &#x5F15;&#x5165;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code>import unittest
+from BSTestRunner import BSTestRunner
+import time,yaml
+from mysql_action import DB
+
+import logging.config
+
+#&#x5F15;&#x5165;&#x65E5;&#x5FD7;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+CON_LOG=&apos;log.conf&apos;
+logging.config.fileConfig(CON_LOG)
+logging=logging.getLogger()
+
+#&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;
+db=DB()
+f=open(&apos;datas.yaml&apos;,&apos;r&apos;)
+datas=yaml.load(f)
+db.init_data(datas)
+
+test_dir=&apos;.&apos;
+report_dir=&apos;./reports&apos;
+
+
+discover=unittest.defaultTestLoader.discover(test_dir,pattern=&apos;test_django_restful.py&apos;)
+
+now=time.strftime(&apos;%Y-%m-%d %H_%M_%S&apos;)
+report_name=report_dir+&apos;/&apos;+now+&apos; test_report.html&apos;
+
+with open (report_name,&apos;wb&apos;) as f:
+    runner=BSTestRunner(stream=f,title=&apos;API Test Report&apos;,description=&apos;Django Restful API Test Report&apos;)
+    logging.info(&apos;============API Test================&apos;)
+    runner.run(discover)
+</code></pre><p>&#x5728; mysql_action.py &#x6DFB;&#x52A0;&#x65E5;&#x5FD7;</p>
+<pre class="language-"><code>from pymysql import connect
+import yaml
+import logging
+
+class DB():
+    def __init__(self):
+        logging.info(&apos;=============init data=================&apos;)
+        logging.info(&apos;connect db...&apos;)
+        self.conn=connect(host=&apos;127.0.0.1&apos;,user=&apos;root&apos;,password=&apos;&apos;,db=&apos;django_restful&apos;)
+
+    def clear(self,table_name):
+        logging.info(&apos;clear db...&apos;)
+        clear_sql=&apos;truncate &apos;+table_name+&apos;;&apos;
+        with self.conn.cursor() as cursor:
+            cursor.execute(&apos;set foreign_key_checks=0;&apos;)
+            cursor.execute(clear_sql)
+        self.conn.commit()
+
+    def insert(self,table_name,table_data):
+        for key in table_data:
+        table_data[key]=&quot;&apos;&quot;+str(table_data[key])+&quot;&apos;&quot;
+
+        key=&apos;,&apos;.join(table_data.keys())
+        value=&apos;,&apos;.join(table_data.values())
+
+        logging.info(key)
+        logging.info(value)
+
+        insert_sql=&apos;insert into &apos;+table_name+&apos;(&apos;+key+&apos;)&apos;+&apos;values&apos;+&apos;(&apos;+value+&apos;)&apos;
+        logging.info(insert_sql)
+
+        with self.conn.cursor() as cursor:
+            cursor.execute(insert_sql)
+        self.conn.commit()
+
+    def close(self):
+        logging.info(&apos;close db&apos;)
+        self.conn.close()
+        logging.info(&apos;==============init data finished!=============&apos;)
+
+    def init_data(self,datas):
+        for table,data in datas.items():
+            self.clear(table)
+            for d in data:
+                self.insert(table,d)
+        self.close()
+
+if __name__ == &apos;__main__&apos;:
+    db=DB()
+    # db.clear(&apos;api_user&apos;)
+    # db.clear(&apos;api_group&apos;)
+    # user_data={&apos;id&apos;:1,&apos;username&apos;:&apos;zxw2018&apos;,&apos;email&apos;:&apos;zxw2018@163.com&apos;}
+    # db.insert(&apos;api_user&apos;,user_data)
+    # db.close()
+
+    f=open(&apos;datas.yaml&apos;,&apos;r&apos;)
+    datas=yaml.load(f)
+    db.init_data(datas)
+</code></pre><p>&#x6700;&#x540E;&#x5728; test_django_restful.py &#x6DFB;&#x52A0;&#x65E5;&#x5FD7;&#x3002;</p>
+<pre class="language-"><code>
+import requests
+import unittest
+from mysql_action import DB
+import yaml
+import logging
+
+class UserTest(unittest.TestCase):
+    def setUp(self):
+        self.base_url=&apos;http://127.0.0.1:8000/users&apos;
+        self.auth=(&apos;51zxw&apos;,&apos;zxw20182018&apos;)
+
+    def test_001_get_user(self):
+        logging.info(&apos;test_001_get_user&apos;)
+        r=requests.get(self.base_url+&apos;/1/&apos;,auth=self.auth)
+        result=r.json()
+
+        self.assertEqual(result[&apos;username&apos;],&apos;sutune&apos;)
+        self.assertEqual(result[&apos;email&apos;],&apos;sutune@163.com&apos;)
+
+    def test_002_add_user(self):
+        logging.info(&apos;test_002_add_user&apos;)
+
+        form_data={&apos;username&apos;:&apos;zxw666&apos;,&apos;email&apos;:&apos;zxw666@163.com&apos;,&apos;groups&apos;:&apos;http://127.0.0.1:8000/groups/2/&apos;}
+        r=requests.post(self.base_url+&apos;/&apos;,data=form_data,auth=self.auth)
+        result=r.json()
+
+        self.assertEqual(result[&apos;username&apos;],&apos;zxw666&apos;)
+        self.assertEqual(result[&apos;email&apos;],&apos;zxw666@163.com&apos;)
+
+    def test_003_update_user(self):
+        logging.info(&apos;test_003_update_user&apos;)
+        form_data={&apos;email&apos;:&apos;zxw2018@163.com&apos;}
+        r=requests.patch(self.base_url+&apos;/1/&apos;,data=form_data,auth=self.auth)
+        result=r.json()
+
+        self.assertEqual(result[&apos;email&apos;],&apos;zxw2018@163.com&apos;)
+
+    def test_004_delete_user(self):
+        logging.info(&apos;test_004_delete_user&apos;)
+        r=requests.delete(self.base_url+&apos;/2/&apos;,auth=self.auth)
+
+        self.assertEqual(r.status_code,204)
+
+    def test_005_no_auth(self):
+        logging.info(&apos;test_005_no_auth&apos;)
+        r=requests.get(self.base_url)
+        result=r.json()
+
+        self.assertEqual(result[&apos;detail&apos;],&apos;Authentication credentials were not provided.&apos;)
+
+
+class GroupTest(unittest.TestCase):
+    def setUp(self):
+        self.base_url=&apos;http://127.0.0.1:8000/groups&apos;
+        self.auth=(&apos;51zxw&apos;,&apos;zxw20182018&apos;)
+
+    def test_001_group_developer(self):
+        logging.info(&apos;test_001_group_developer&apos;)
+        r=requests.get(self.base_url+&apos;/1/&apos;,auth=self.auth)
+        result=r.json()
+
+        self.assertEqual(result[&apos;name&apos;],&apos;Developer&apos;)
+
+    def test_002_add_group(self):
+        logging.info(&apos;test_002_add_group&apos;)
+        form_data={&apos;name&apos;:&apos;Pm&apos;}
+        r=requests.post(self.base_url+&apos;/&apos;,data=form_data,auth=self.auth)
+        result=r.json()
+
+        self.assertEqual(result[&apos;name&apos;],&apos;Pm&apos;)
+
+    def test_003_update_group(self):
+        logging.info(&apos;test_003_update_group&apos;)
+        form_data={&apos;name&apos;:&apos;Boss&apos;}
+        r=requests.patch(self.base_url+&apos;/2/&apos;,data=form_data,auth=self.auth)
+        result=r.json()
+
+        self.assertEqual(result[&apos;name&apos;],&apos;Boss&apos;)
+
+    def test_004_delete_group(self):
+        logging.info(&apos;test_004_delete_group&apos;)
+        r=requests.delete(self.base_url+&apos;/1/&apos;,auth=self.auth)
+        self.assertEqual(r.status_code,204)
+
+if __name__ == &apos;__main__&apos;:
+    db=DB()
+    f=open(&apos;datas.yaml&apos;,&apos;r&apos;)
+    datas=yaml.load(f)
+    db.init_data(datas)
+    unittest.main()
+</code></pre><p>&#x8FD0;&#x884C;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x5728; logs &#x76EE;&#x5F55;&#x91CC;&#x9762;&#x770B;&#x5230;&#x5982;&#x4E0B; log&#xFF1A;</p>
+<pre class="language-"><code>2018-08-20 11:25:57,456 mysql_action.py[line:7] INFO =============init data=================
+2018-08-20 11:25:57,456 mysql_action.py[line:8] INFO connect db...
+2018-08-20 11:25:57,465 mysql_action.py[line:12] INFO clear db...
+2018-08-20 11:25:57,469 mysql_action.py[line:26] INFO email,username,id,groups
+2018-08-20 11:25:57,469 mysql_action.py[line:27] INFO
+&apos;sutune@163.com&apos;,&apos;sutune&apos;,&apos;1&apos;,&apos;http://127.0.0.1:8000/groups/1/&apos;
+2018-08-20 11:25:57,470 mysql_action.py[line:30] INFO insert into
+api_user(email,username,id,groups)values(&apos;sutune@163.com&apos;,&apos;sutune&apos;,&apos;1&apos;,&apos;http://127.0.0.1:8000/groups/1/&apos;)
+2018-08-20 11:25:57,471 mysql_action.py[line:26] INFO email,username,id,groups
+
+2018-08-20 11:25:57,471 mysql_action.py[line:27] INFO
+&apos;51zxw@163.com&apos;,&apos;51zxw&apos;,&apos;2&apos;,&apos;http://127.0.0.1:8000/groups/2/&apos;
+2018-08-20 11:25:57,473 mysql_action.py[line:30] INFO insert into
+api_user(email,username,id,groups)values(&apos;51zxw@163.com&apos;,&apos;51zxw&apos;,&apos;2&apos;,&apos;http://127.0.0.1:8000/groups/2/&apos;)
+2018-08-20 11:25:57,473 mysql_action.py[line:12] INFO clear db...
+2018-08-20 11:25:57,477 mysql_action.py[line:26] INFO name,id
+2018-08-20 11:25:57,477 mysql_action.py[line:27] INFO &apos;Developer&apos;,&apos;1&apos;
+2018-08-20 11:25:57,477 mysql_action.py[line:30] INFO insert into api_group(name,id)values(&apos;Developer&apos;,&apos;1&apos;)
+2018-08-20 11:25:57,478 mysql_action.py[line:26] INFO name,id
+2018-08-20 11:25:57,478 mysql_action.py[line:27] INFO &apos;Tester&apos;,&apos;2&apos;
+2018-08-20 11:25:57,479 mysql_action.py[line:30] INFO insert into api_group(name,id)values(&apos;Tester&apos;,&apos;2&apos;)
+2018-08-20 11:25:57,479 mysql_action.py[line:37] INFO close db
+2018-08-20 11:25:57,479 mysql_action.py[line:39] INFO ==============init data finished!=============
+2018-08-20 11:25:57,658 run.py[line:28] INFO ============API Test================
+2018-08-20 11:25:57,659 test_django_restful.py[line:60] INFO test_001_group_developer
+2018-08-20 11:25:57,783 test_django_restful.py[line:67] INFO test_002_add_group
+2018-08-20 11:25:57,903 test_django_restful.py[line:75] INFO test_003_update_group
+2018-08-20 11:25:58,009 test_django_restful.py[line:83] INFO test_004_delete_group
+2018-08-20 11:25:58,106 test_django_restful.py[line:14] INFO test_001_get_user
+2018-08-20 11:25:58,211 test_django_restful.py[line:22] INFO test_002_add_user
+2018-08-20 11:25:58,309 test_django_restful.py[line:32] INFO test_003_update_user
+2018-08-20 11:25:58,405 test_django_restful.py[line:40] INFO test_004_delete_user
+2018-08-20 11:25:58,496 test_django_restful.py[line:46] INFO test_005_no_auth
+</code></pre><h3 id="&#x96C6;&#x6210;-jenkins"><a name="&#x96C6;&#x6210;-jenkins" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x6210;-jenkins"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96C6;&#x6210; Jenkins</h3>
+<p>&#x4F7F;&#x7528; Jenkins &#x6301;&#x7EED;&#x96C6;&#x6210;&#x5E73;&#x53F0;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5B9A;&#x65F6;&#x6267;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x4EFB;&#x52A1;&#xFF0C;&#x81EA;&#x52A8;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x63A8;&#x9001;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;&#xFF0C;&#x8FD9;&#x6837;&#x4F1A;&#x6709;&#x6548;&#x63D0;&#x9AD8;&#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;&#x6267;&#x884C;&#x6548;&#x7387;&#x3002;</p>
+<p>&#x6253;&#x5F00; Jenkins &#x521B;&#x5EFA;&#x9879;&#x76EE; django_restful_api &#x7136;&#x540E;&#x5728;&#x6784;&#x5EFA;&#x4E2D;&#x9009;&#x62E9; &quot;&#x6267;&#x884C; Windows &#x6279;&#x5904;&#x7406;&quot; &#x586B;&#x5165;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code>d:
+cd D:\django_restful\api\test_project
+C:\Python35\python.exe run.py
+</code></pre><p><img src="index_files/409bd203-7e2a-402c-8b98-3b922b4727f3.png" alt=""></p>
+<p>&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;</p>
+<p><img src="index_files/f2f7905f-fc1c-4cbe-a872-311a28a912f2.jpg" alt=""></p>
+<p>&#x6700;&#x540E;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x62A5;&#x544A;&#x6587;&#x4EF6;&#x5939;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;&#x3002;</p>
+<h3 id="jenkins-&#x5B9A;&#x65F6;&#x6784;&#x5EFA;&#x8BED;&#x6CD5;"><a name="jenkins-&#x5B9A;&#x65F6;&#x6784;&#x5EFA;&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#jenkins-&#x5B9A;&#x65F6;&#x6784;&#x5EFA;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Jenkins &#x5B9A;&#x65F6;&#x6784;&#x5EFA;&#x8BED;&#x6CD5;</h3>
+<pre class="language-"><code>* * * * *
+</code></pre><p>(&#x4E94;&#x9897;&#x661F;&#xFF0C;&#x4E2D;&#x95F4;&#x7528;&#x7A7A;&#x683C;&#x9694;&#x5F00;&#xFF09;</p>
+<p>&#x2022; &#x7B2C;&#x4E00;&#x4E2A;<em>&#x8868;&#x793A;&#x5206;&#x949F;&#xFF0C;&#x53D6;&#x503C; 0~59
+&#x2022; &#x7B2C;&#x4E8C;&#x4E2A;</em>&#x8868;&#x793A;&#x5C0F;&#x65F6;&#xFF0C;&#x53D6;&#x503C; 0~23
+&#x2022; &#x7B2C;&#x4E09;&#x4E2A;<em>&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x6708;&#x7684;&#x7B2C;&#x51E0;&#x5929;&#xFF0C;&#x53D6;&#x503C; 1~31
+&#x2022; &#x7B2C;&#x56DB;&#x4E2A;</em>&#x8868;&#x793A;&#x7B2C;&#x51E0;&#x6708;&#xFF0C;&#x53D6;&#x503C; 1~12
+&#x2022; &#x7B2C;&#x4E94;&#x4E2A;*&#x8868;&#x793A;&#x4E00;&#x5468;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5929;&#xFF0C;&#x53D6;&#x503C; 0~7&#xFF0C;&#x5176;&#x4E2D; 0 &#x548C; 7 &#x4EE3;&#x8868;&#x7684;&#x90FD;&#x662F;&#x5468;&#x65E5;</p>
+<p><strong>&#x4F7F;&#x7528;&#x6848;&#x4F8B;</strong></p>
+<p>&#x6BCF;&#x5929;&#x4E0B;&#x5348; 18 &#x70B9;&#x5B9A;&#x65F6;&#x6784;&#x5EFA;&#x4E00;&#x6B21;</p>
+<pre class="language-"><code>0 18 * * 1-5
+</code></pre><p>&#x6BCF;&#x5929;&#x65E9;&#x4E0A; 8 &#x70B9;&#x6784;&#x5EFA;&#x4E00;&#x6B21;</p>
+<pre class="language-"><code>0 8 * * *
+</code></pre><p>&#x6BCF; 30 &#x5206;&#x949F;&#x6784;&#x5EFA;&#x4E00;&#x6B21;&#xFF1A;</p>
+<pre class="language-"><code>H/30 * * * *
+</code></pre><h3 id="python-&#x90AE;&#x4EF6;&#x53D1;&#x9001;"><a name="python-&#x90AE;&#x4EF6;&#x53D1;&#x9001;" class="anchor-navigation-ex-anchor" href="#python-&#x90AE;&#x4EF6;&#x53D1;&#x9001;"><i class="fa fa-link" aria-hidden="true"></i></a>Python &#x90AE;&#x4EF6;&#x53D1;&#x9001;</h3>
+<p>&#x53C2;&#x8003;&#x8D44;&#x6599;&#xFF1A;<a href="http://www.51zxw.net/list.aspx?page=4&amp;cid=615" target="_blank">Selenium &#x6559;&#x7A0B; 7-1~7-4</a></p>
+<hr>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a name="&#x53C2;&#x8003;&#x8D44;&#x6599;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;&#x8D44;&#x6599;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<p>&#x2022; <a href="http://www.runoob.com/python/python-mysql.html" target="_blank">http://www.runoob.com/python/python-mysql.html</a>
+&#x2022; <a href="https://baike.baidu.com/item/navicat/3089699?fr=aladdin" target="_blank">https://baike.baidu.com/item/navicat/3089699?fr=aladdin</a>
+&#x2022; <a href="https://baike.baidu.com/item/mySQL/471251" target="_blank">https://baike.baidu.com/item/mySQL/471251</a></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/monsterone" target="_blank">monster</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2020-02-11 05:48:40 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Restful接口开发与测试.html" class="navigation navigation-prev " aria-label="Previous page: 第3节：Restful接口开发与测试">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Locust接口性能测试.html" class="navigation navigation-next " aria-label="Next page: 第5节：Locust接口性能测试">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第4节：Django数据管理","level":"1.4.4","depth":2,"next":{"title":"第5节：Locust接口性能测试","level":"1.4.5","depth":2,"path":"第三章/Locust接口性能测试.md","ref":"第三章/Locust接口性能测试.md","articles":[]},"previous":{"title":"第3节：Restful接口开发与测试","level":"1.4.3","depth":2,"path":"第三章/Restful接口开发与测试.md","ref":"第三章/Restful接口开发与测试.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","disqus","github-buttons","editlink","ga","-highlight","prism","bibtex-indexed-cite","anchor-navigation-ex","page-footer-ex","splitter","todo","copy-code-button","expandable-chapters-small","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"ignore":["mermaid","eval-js"],"css":["prismjs/themes/prism-solarizedlight.css"]},"disqus":{"useIdentifier":false,"shortName":"gitbook-template"},"editlink":{"label":"Edit","multilingual":false,"base":"https://github.com/monster/mybook/blob/master"},"todo":{},"page-footer-ex":{"copyright":"By [monster](https://github.com/monsterone)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"bibtex-indexed-cite":{"path":"/"},"github-buttons":{"buttons":[{"user":"monster","repo":"mybook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-131910384-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"接口","bib":[],"gitbook":"*"},"file":{"path":"第三章/Django数据管理.md","mtime":"2020-02-11T05:48:40.839Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-11T05:49:29.114Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
